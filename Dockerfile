@@ -19,6 +19,7 @@ COPY src/ ./src/
 COPY agent_fastapi.py .
 COPY cli.py .
 COPY config.toml .
+COPY run.sh .
 COPY web/ ./web/
 COPY prompts/ ./prompts/
 COPY .storyline/ ./.storyline/
@@ -28,8 +29,8 @@ COPY download.sh .
 COPY modelscope_config.toml.template .
 COPY modelscope_entrypoint.sh .
 
-# Download models
-RUN chmod +x download.sh && ./download.sh
+# Download models and set permissions
+RUN chmod +x download.sh run.sh modelscope_entrypoint.sh && ./download.sh
 
 # Expose port
 EXPOSE 7860

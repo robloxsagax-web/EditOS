@@ -24,9 +24,9 @@ COPY prompts/ ./prompts/
 COPY .storyline/ ./.storyline/
 COPY download.sh .
 
-# Copy ModelScope template (optional, will be used if env vars are set)
-COPY modelscope_config.toml.template . 2>/dev/null || true
-COPY modelscope_entrypoint.sh . 2>/dev/null || true
+# Copy ModelScope specific files
+COPY modelscope_config.toml.template .
+COPY modelscope_entrypoint.sh .
 
 # Download models
 RUN chmod +x download.sh && ./download.sh

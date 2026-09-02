@@ -1,0 +1,171 @@
+# ============= Developer Options ===============
+[developer]
+developer_mode = false
+print_context = false
+
+# ============= Project Paths ======================
+[project]
+media_dir = "./outputs/media"
+bgm_dir = "./resource/bgms"
+outputs_dir = "./outputs"
+
+# ============= Model Config =============
+# Configure via environment variables - see .env.example
+
+[llm]
+model = "${OPENSTORYLINE_LLM_MODEL}"
+base_url = "${OPENSTORYLINE_LLM_BASE_URL}"
+api_key = "${OPENSTORYLINE_LLM_API_KEY}"
+timeout = 30.0
+temperature = 0.1
+max_retries = 2
+
+[vlm]
+model = "${OPENSTORYLINE_VLM_MODEL}"
+base_url = "${OPENSTORYLINE_VLM_BASE_URL}"
+api_key = "${OPENSTORYLINE_VLM_API_KEY}"
+timeout = 20.0
+temperature = 0.1
+max_retries = 2
+
+# ============= MCP Server =============
+[local_mcp_server]
+server_name = "storyline"
+server_cache_dir = ".storyline/.server_cache"
+server_transport = "streamable-http"
+url_scheme = "http"
+connect_host = "127.0.0.1"
+inline_media = "auto"
+port = 8001
+path = "/mcp"
+
+json_response = true
+stateless_http = false
+timeout = 600
+available_node_pkgs = [
+    "open_storyline.nodes.core_nodes"
+]
+available_nodes = [
+    "LoadMediaNode", "SearchMediaNode", "SplitShotsNode", "LocalASRNode", "SpeechRoughCutNode", "GenerateAITransitionNode", 
+    "UnderstandClipsNode", "FilterClipsNode", "GroupClipsNode", "GenerateScriptNode", "ScriptTemplateRecomendation",
+    "GenerateVoiceoverNode", "SelectBGMNode", "RecommendTransitionNode", "RecommendTextNode",
+    "PlanTimelineProNode", "PlanTimelineAITransitionNode", "RenderVideoNode"
+]
+
+# =========== skills ==========
+[skills]
+skill_dir = "./.storyline/skills"
+
+# =========== pexels ==========
+[search_media]
+pexels_api_key = "${OPENSTORYLINE_PEXELS_API_KEY}"
+
+# ============= Shot Segmentation =============
+[split_shots]
+transnet_weights = ".storyline/models/transnetv2-pytorch-weights.pth"
+transnet_device = "cpu"
+
+# ============= Video Visual Understanding =============
+[understand_clips]
+sample_fps = 2.0
+max_frames = 64
+
+# ============= Clip Grouping =============
+[group_clips]
+base_max_tokens = 4096
+tokens_per_clip = 48
+max_tokens_cap = 16384
+retry_token_step = 2048
+max_parse_retries = 2
+
+# ============= Script Templates =============
+[script_template]
+script_template_dir = "./resource/script_templates"
+script_template_info_path = "./resource/script_templates/meta.json"
+
+# ============= Voiceover Generation ===================
+[generate_voiceover]
+tts_provider_params_path = "./resource/tts/tts_providers.json"
+
+[generate_voiceover.providers.302]
+base_url = ""
+api_key = ""
+
+[generate_voiceover.providers.bytedance]
+uid = ""
+appid = ""
+access_token = ""
+
+[generate_voiceover.providers.minimax]
+base_url = ""
+api_key = ""
+
+[generate_voiceover.providers.elevenlabs]
+base_url = "https://api.elevenlabs.io"
+api_key = "${OPENSTORYLINE_GENERATE_VOICEOVER__PROVIDERS__ELEVENLABS__API_KEY}"
+
+# ============= Native Transitions (FREE!) ===================
+[transitions]
+enabled = true
+default_type = "crossfade"
+default_duration = 0.4
+
+# ============= AI Transition (disabled by default) ===================
+[generate_ai_transition]
+enabled = false
+
+[generate_ai_transition.providers.dashscope]
+model_name = ""
+api_key = ""
+
+[generate_ai_transition.providers.minimax]
+model_name = ""
+api_key = ""
+
+# ============= BGM Selection ====================
+[select_bgm]
+sample_rate = 22050
+hop_length = 2048
+frame_length = 2048
+
+# ============= Font Recommendation ====================
+[recommend_text]
+font_info_path = "resource/fonts/font_info.json"
+
+# ============= Timeline Organization ====================
+[plan_timeline]
+beat_type_max = 1
+title_duration = 0
+bgm_loop = true
+min_clip_duration = 1000
+
+estimate_text_min = 1500
+estimate_text_char_per_sec = 6.0
+
+image_default_duration = 3000
+group_margin_over_voiceover = 1000
+
+[plan_timeline_pro]
+min_single_text_duration = 200
+max_text_duration = 5000
+img_default_duration = 1500
+
+min_group_margin = 1500
+max_group_margin = 2000
+
+min_clip_duration = 1000
+
+tts_margin_mode = "random"
+min_tts_margin = 300
+max_tts_margin = 400
+
+text_tts_offset_mode = "random"
+min_text_tts_offset = 0
+max_text_tts_offset = 0
+
+long_short_text_duration = 3000
+long_text_margin_rate = 0.0
+short_text_margin_rate = 0.0
+
+text_duration_mode = "with_tts"
+is_text_beats = false

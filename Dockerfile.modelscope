@@ -1,0 +1,54 @@
+# ModelScope Docker Image
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    ffmpeg \
+    wget \
+    unzip \
+    git \
+    git-lfs \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements first for caching
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application files
+COPY src/ ./src/
+COPY agent_fastapi.py .
+COPY cli.py .
+COPY web/ ./web/
+COPY prompts/ ./prompts/
+COPY resource/ ./resource/
+COPY .storyline/ ./.storyline/
+COPY download.sh .
+
+# Copy ModelScope specific files
+COPY modelscope_config.toml.template .
+COPY modelscope_entrypoint.sh .
+RUN chmod +x modelscope_entrypoint.sh download.sh
+
+# Download TransNetV2 model
+RUN mkdir -p .storyline/models && \
+    wget -q --show-progress -O .storyline/models/transnetv2-pytorch-weights.pth \
+    "https://download.openmmlab.com/mmaction/others/transnetv2.pth" || \
+    echo "Warning: Could not download TransNetV2 model from primary source"
+
+# Create necessary directories
+RUN mkdir -p outputs/media outputs .storyline/.server_cache .storyline/skills
+
+# Expose port
+EXPOSE 7860
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
+    CMD curl -f http://localhost:7860/ || exit 1
+
+# Run with entrypoint script
+ENTRYPOINT ["/app/modelscope_entrypoint.sh"]

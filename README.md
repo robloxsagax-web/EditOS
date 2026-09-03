@@ -246,10 +246,3 @@ cd EditOS
 MIT License - see [LICENSE](LICENSE)
 
 ---
-
-## NEWS
-
-* **2026-08-05** v1.0.0 - Initial release with full video editing pipeline
-* **2026-04-02** - AI Transition Generation feature
-* **2026-03-22** - ASR-based rough cut for speech videos
-* **2026-03-12** - Claude Code & OpenClaw integration

@@ -13,14 +13,16 @@ fi
 HOST="${HOST:-0.0.0.0}"
 PORT="${PORT:-7860}"
 
-python -m open_storyline.mcp.server &
-MCP_PID=$!
+# Note: MCP server requires unreleased MCP library version (FastMCP)
+# For now, just run the web API
+# python -m open_storyline.mcp.server &
+# MCP_PID=$!
 
 uvicorn agent_fastapi:app \
   --host "$HOST" \
   --port "$PORT" &
 WEB_PID=$!
 
-trap 'kill $MCP_PID $WEB_PID' INT TERM
+trap 'kill $WEB_PID 2>/dev/null || true' INT TERM
 
 wait

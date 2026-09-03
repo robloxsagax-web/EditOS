@@ -6,8 +6,6 @@ langchain-openai==1.1.6
 langchain-community==0.4.1
 langchain-huggingface==1.2.0
 langgraph==1.2.7
-mcp==1.0.0
-langchain-mcp-adapters==0.1.0
 colorlog==6.9.0
 librosa==0.11.0
 transnetv2-pytorch==1.0.5

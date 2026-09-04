@@ -106,7 +106,6 @@ api_key = "${OPENSTORYLINE_GENERATE_VOICEOVER__PROVIDERS__ELEVENLABS__API_KEY}"
 
 # ============= AI Transition (disabled by default) ===================
 [generate_ai_transition]
-enabled = false
 
 [generate_ai_transition.providers.dashscope]
 model_name = ""

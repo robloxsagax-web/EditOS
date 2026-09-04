@@ -161,6 +161,12 @@ async def build_agent(
     
     # 1) LLM: use user input from form first, fall back to config.toml
     llm_model = _get(llm_override, "model", cfg.llm.model)
+    # Fix duplicate model names - take first half if clearly duplicated
+    if llm_model and len(llm_model) > 20:
+        half = len(llm_model) // 2
+        if llm_model[:half] == llm_model[half:]:
+            llm_model = llm_model[:half]
+    llm_model = llm_model.strip() if llm_model else llm_model
     llm_base_url = _norm_url(_get(llm_override, "base_url", cfg.llm.base_url))
     llm_api_key = _get(llm_override, "api_key", cfg.llm.api_key)
     llm_timeout = _get(llm_override, "timeout", cfg.llm.timeout)
@@ -186,6 +192,11 @@ async def build_agent(
 
     # 2) VLM: same priority as above
     vlm_model = _get(vlm_override, "model", cfg.vlm.model)
+    if vlm_model and len(vlm_model) > 20:
+        half = len(vlm_model) // 2
+        if vlm_model[:half] == vlm_model[half:]:
+            vlm_model = vlm_model[:half]
+    vlm_model = vlm_model.strip() if vlm_model else vlm_model
     vlm_base_url = _norm_url(_get(vlm_override, "base_url", cfg.vlm.base_url))
     vlm_api_key = _get(vlm_override, "api_key", cfg.vlm.api_key)
     vlm_timeout = _get(vlm_override, "timeout", cfg.vlm.timeout)

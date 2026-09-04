@@ -104,13 +104,6 @@ api_key = ""
 
 
 # ============= AI 转场生成 / AI transition generation ===================
-enabled = false  # Native transitions enabled by default
-
-# ============= Native Transitions (FREE!) ===================
-[transitions]
-enabled = true
-default_type = "crossfade"  # Options: crossfade, zoom_punch, flash, slide, blur
-default_duration = 0.4     # Duration in seconds
 
 [generate_ai_transition]
 

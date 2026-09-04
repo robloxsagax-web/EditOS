@@ -12,7 +12,6 @@
 </p>
 
 <p align="center">
-  <a href="https://www.modelscope.ai/studios/Muhammad_Mujtaba/EditOS/summary">
     <img src="https://img.shields.io/badge/🌐_ModelScope-Demo-4B6CFF?style=for-the-badge&logo=modelscope&logoColor=white" alt="ModelScope Demo"/>
   </a>
   <a href="https://github.com/robloxsagax-web/EditOS">

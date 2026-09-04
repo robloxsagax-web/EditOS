@@ -13,16 +13,16 @@ outputs_dir = "./outputs"
 # Configure via environment variables - see .env.example
 
 [llm]
-model = "openai/gpt-4o-mini"
-base_url = "${OPENSTORYLINE_LLM_BASE_URL}"
+model = "${OPENSTORYLINE_LLM_MODEL:-openai/gpt-4o-mini}"
+base_url = "${OPENSTORYLINE_LLM_BASE_URL:-https://openrouter.ai/api/v1}"
 api_key = "${OPENSTORYLINE_LLM_API_KEY}"
 timeout = 30.0
 temperature = 0.1
 max_retries = 2
 
 [vlm]
-model = "${OPENSTORYLINE_VLM_MODEL}"
-base_url = "${OPENSTORYLINE_VLM_BASE_URL}"
+model = "qwen/qwen-vl-plus"
+base_url = "https://openrouter.ai/api/v1"
 api_key = "${OPENSTORYLINE_VLM_API_KEY}"
 timeout = 20.0
 temperature = 0.1

@@ -13,7 +13,7 @@ outputs_dir = "./outputs"
 # Configure via environment variables - see .env.example
 
 [llm]
-model = "${OPENSTORYLINE_LLM_MODEL}"
+model = "openai/gpt-4o-mini"
 base_url = "${OPENSTORYLINE_LLM_BASE_URL}"
 api_key = "${OPENSTORYLINE_LLM_API_KEY}"
 timeout = 30.0
@@ -103,12 +103,6 @@ api_key = ""
 [generate_voiceover.providers.elevenlabs]
 base_url = "https://api.elevenlabs.io"
 api_key = "${OPENSTORYLINE_GENERATE_VOICEOVER__PROVIDERS__ELEVENLABS__API_KEY}"
-
-# ============= Native Transitions (FREE!) ===================
-[transitions]
-enabled = true
-default_type = "crossfade"
-default_duration = 0.4
 
 # ============= AI Transition (disabled by default) ===================
 [generate_ai_transition]

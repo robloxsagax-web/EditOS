@@ -245,57 +245,26 @@ sequenceDiagram
 
 ---
 
-## 🎥 Demo — Edit a Video From Raw Footage in Minutes
+<table align="center">
+<tr>
+<td align="center"><b>🌊 Beach / Travel B-Roll</b></td>
+<td align="center"><b>🏙️ Cityscape Montage</b></td>
+</tr>
+<tr>
+<td align="center">
+<video src="https://github.com/robloxsagax-web/EditOS/raw/main/public/547464911-444fd0fb-8824-4c25-b449-9309b0fcfd85.mp4" width="280" controls />
+<br>
+<sub><i>"60s beach vlog, calm VO, soft BGM"</i></sub>
+</td>
+<td align="center">
+<video src="https://github.com/robloxsagax-web/EditOS/raw/main/public/547464913-ff1d669b-1d27-4cf8-b0be-1b141c717466.mp4" width="280" controls />
+<br>
+<sub><i>"City morning montage, energetic"</i></sub>
+</td>
+</tr>
+<tr>
 
-All demo footage lives in [`public/`](public/) — original, unedited stock uploads that shipped with this repo. Feed them through the chat app, or prescript a vlog brief, and watch the pipeline do the rest.
-
-| # | File | Size | What it is | Try prompt |
-|---|---|---|---|---|
-| 1 | `547464911-….mp4` | ~10.8 MB | Beach / travel b-roll (raw) | `"60s beach vlog, calm VO, soft BGM"` |
-| 2 | `547464913-….mp4` | ~11.3 MB | Travel / cityscape b-roll (raw) | `"City morning montage, energetic"` |
-| 3 | `547464917-….mp4` | ~6.8 MB | Lifestyle / unboxing clip (raw) | `"Clean 30s unboxing, minimal"` |
-| 4 | `547464918-….mp4` | ~5.5 MB | Short lifestyle / product clip (raw) | `"Snappy 20s product teaser"` |
-
-> 🎬 **Watch the raw clips** — open [`public/`](public/) and click any file, or use these direct links:
-
-| Clip | Try |
-|---|---|
-| #1 Beach b-roll (10.8 MB | [▶️ Play clip](public/547464911-444fd0fb-8824-4c25-b449-9309b0fcfd85.mp4) |
-| #2 Cityscape b-roll (11.3 MB | [▶️ Play clip](public/547464913-ff1d669b-1d27-4cf8-b0be-1b141c717466.mp4) |
-| #3 Lifestyle / unboxing (6.8 MB | [▶️ Play clip](public/547464917-bc441dfa-e995-4575-8401-ecefa269e57b%20(1).mp4) |
-| #4 Product teaser (5.5 MB | [▶️ Play clip](public/547464918-533ef5c3-bb76-4416-bff7-825e88b00b7d%20(1).mp4) |
-
-<details>
-<summary>🎞️ Inline HTML players (for renderers that support `<video>` — raw markdown, VS Code, Obsidian…</summary>
-
-**Clip 1 — Beach B-Roll**
-
-```html
-<video src="public/547464911-444fd0fb-8824-4c25-b449-9309b0fcfd85.mp4" width="320" controls muted></video>
-```
-
-**Clip 2 — Cityscape B-Roll**
-
-```html
-<video src="public/547464913-ff1d669b-1d27-4cf8-b0be-1b141c717466.mp4" width="320" controls muted></video>
-```
-
-**Clip 3 — Lifestyle / Unboxing**
-
-```html
-<video src="public/547464917-bc441dfa-e995-4575-8401-ecefa269e57b%20(1).mp4" width="320" controls muted></video>
-```
-
-**Clip 4 — Product Teaser**
-
-```html
-<video src="public/547464918-533ef5c3-bb76-4416-bff7-825e88b00b7d%20(1).mp4" width="320" controls muted></video>
-```
-
-> ℹ️ **Note:** GitHub's web preview strips raw `<video>` tags — that's why the links above exist. In fully HTML-capable viewers the snippet above gives inline players.
-
-</details>
-
+  
 ---
 
 ## 🖥️ App Interface

@@ -672,7 +672,7 @@ class GenerateVoiceoverNode(BaseNode):
         if not api_key:
             raise ValueError("ElevenLabs missing api_key (xi-api-key)")
 
-        voice_id = tts_params.get("voice_id") or "21m00Tcm4TlvDq8ikWAM"  # Default: Rachel voice
+        voice_id = tts_params.get("voice_id") or "EXAVITQu4vr4xnSDxMaL"  # Default: Sarah (Free API voice)
         api_url = f"{base_url}/v1/text-to-speech/{voice_id}"
 
         headers = {

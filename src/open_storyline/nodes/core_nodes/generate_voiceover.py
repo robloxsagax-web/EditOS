@@ -42,7 +42,7 @@ class GenerateVoiceoverNode(BaseNode):
         "elevenlabs": "_tts_elevenlabs_sync",
     }
 
-    _DEFAULT_PROVIDER = "minimax"
+    _DEFAULT_PROVIDER = "elevenlabs"
 
     MILLISECONDS_PER_SECOND = 1000.0
     _SAFE_MARGIN = 10

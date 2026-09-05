@@ -31,8 +31,6 @@ If you just want to explore it first, you can also use it like a normal chat mod
 
 * “Introduce yourself”
 
-<img src="https://github.com/user-attachments/assets/a7c102a0-299d-4fcb-a890-0bcb165867d2" alt="demo" width="500">
-
 ### 1.2 Editing
 
 EditOS supports **intent intervention and partial redo at any stage**. After a step completes, you can simply describe what you want to change in one sentence. The agent will locate the step that needs to be rerun, without restarting from the beginning. For example:
@@ -41,7 +39,6 @@ EditOS supports **intent intervention and partial redo at any stage**. After a s
 * Switch to a more upbeat background music.
 * Change the subtitle color to better match the sunset theme.
 
-<img src="https://github.com/user-attachments/assets/18c1ac82-873d-4ced-beb3-443d0fc9192c" alt="demo" width="500">
 
 ### 1.3 Style Imitation
 
@@ -50,7 +47,6 @@ With the style imitation Skill, you can reproduce almost any writing style to ge
 * Generate copy in a Shakespearean style for me.
 * Mimic the tone of my social media posts.
 
-<img src="https://github.com/user-attachments/assets/67edcb95-a71d-447c-ac13-ae28d0bbd698" alt="demo" width="500">
 
 ### 1.4 Interrupting
 

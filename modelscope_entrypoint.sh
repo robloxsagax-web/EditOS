@@ -8,12 +8,33 @@ export PYTHONPATH="$ROOT_DIR/src"
 echo "Generating config.toml from template..."
 python3 << 'PYTHON_EOF'
 import os
-with open(os.environ.get("ROOT_DIR", ".") + "/modelscope_config.toml.template") as f:
+import json
+
+ROOT_DIR = os.environ.get("ROOT_DIR", ".")
+template_path = os.path.join(ROOT_DIR, "modelscope_config.toml.template")
+config_path = os.path.join(ROOT_DIR, "config.toml")
+
+# Debug: print all OPENSTORYLINE_ env vars
+print("=== Environment Variables Debug ===")
+for key, val in sorted(os.environ.items()):
+    if key.startswith("OPENSTORYLINE_"):
+        print(f"  {key}={val[:20]}..." if len(val) > 20 else f"  {key}={val}")
+
+with open(template_path) as f:
     content = f.read()
+
+replacements = 0
 for key, val in os.environ.items():
     if key.startswith("OPENSTORYLINE_"):
-        content = content.replace("${" + key + "}", val)
-with open(os.environ.get("ROOT_DIR", ".") + "/config.toml", "w") as f:
+        placeholder = "${" + key + "}"
+        if placeholder in content:
+            content = content.replace(placeholder, val)
+            replacements += 1
+            print(f"Replaced: {key}")
+
+print(f"=== Total replacements: {replacements} ===")
+
+with open(config_path, "w") as f:
     f.write(content)
 print("Config generated successfully!")
 PYTHON_EOF

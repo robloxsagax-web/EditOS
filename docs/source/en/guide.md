@@ -75,8 +75,6 @@ After you polish a satisfying video, you can ask the agent to **summarize the ed
 
 Next time you edit similar content, simply ask the agent to use this Skill to reproduce the style.
 
-<img src="https://github.com/user-attachments/assets/d99faca2-233c-49d0-829e-336b2b76a46d" alt="demo" width="500">
-
 ### 1.7 Mobile Usage
 
 **Warning: The commands below will expose your service to your local network. Use only on trusted networks. Do NOT run these commands on public networks.**

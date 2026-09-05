@@ -9,7 +9,7 @@ Use this skill when the task is to install or repair a local source checkout of 
 
 Keep the workflow deterministic:
 
-1. Confirm the repo path and read the current README.md and config.toml.
+1. Confirm the repo path and read the current README.md and config.toml. 
 2. Detect local prerequisites before changing anything.
 3. Prefer a local `venv` install unless the user explicitly asks for Docker or `conda`.
 4. Download resources only after Python dependencies succeed.

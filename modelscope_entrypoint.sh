@@ -4,23 +4,23 @@ set -e
 ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
 export PYTHONPATH="$ROOT_DIR/src"
 
-# Generate config.toml from template with environment variables
+# Generate config.toml from template with environment variables (using Python for portability)
 echo "Generating config.toml from template..."
-envsubst < "$ROOT_DIR/modelscope_config.toml.template" > "$ROOT_DIR/config.toml"
+python3 << 'PYTHON_EOF'
+import os
+with open(os.environ.get("ROOT_DIR", ".") + "/modelscope_config.toml.template") as f:
+    content = f.read()
+for key, val in os.environ.items():
+    if key.startswith("OPENSTORYLINE_"):
+        content = content.replace("${" + key + "}", val)
+with open(os.environ.get("ROOT_DIR", ".") + "/config.toml", "w") as f:
+    f.write(content)
+print("Config generated successfully!")
+PYTHON_EOF
 
 # Required environment variables check
 if [ -z "$OPENSTORYLINE_LLM_API_KEY" ]; then
     echo "ERROR: OPENSTORYLINE_LLM_API_KEY is not set"
-    exit 1
-fi
-
-if [ -z "$OPENSTORYLINE_LLM_MODEL" ]; then
-    echo "ERROR: OPENSTORYLINE_LLM_MODEL is not set"
-    exit 1
-fi
-
-if [ -z "$OPENSTORYLINE_LLM_BASE_URL" ]; then
-    echo "ERROR: OPENSTORYLINE_LLM_BASE_URL is not set"
     exit 1
 fi
 
@@ -29,19 +29,8 @@ if [ -z "$OPENSTORYLINE_VLM_API_KEY" ]; then
     exit 1
 fi
 
-if [ -z "$OPENSTORYLINE_VLM_MODEL" ]; then
-    echo "ERROR: OPENSTORYLINE_VLM_MODEL is not set"
-    exit 1
-fi
-
-if [ -z "$OPENSTORYLINE_VLM_BASE_URL" ]; then
-    echo "ERROR: OPENSTORYLINE_VLM_BASE_URL is not set"
-    exit 1
-fi
-
-echo "Config generated successfully!"
-echo "LLM Model: $OPENSTORYLINE_LLM_MODEL"
-echo "VLM Model: $OPENSTORYLINE_VLM_MODEL"
+echo "LLM Model: $(grep 'model =' $ROOT_DIR/config.toml | head -1)"
+echo "VLM Model: $(grep 'model =' $ROOT_DIR/config.toml | tail -1)"
 
 # Download models if needed
 if [ ! -f ".storyline/models/transnetv2-pytorch-weights.pth" ]; then

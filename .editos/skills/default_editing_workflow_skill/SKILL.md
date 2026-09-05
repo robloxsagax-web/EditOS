@@ -1,6 +1,6 @@
 ---
 name: default_editing_workflow_skill
-description: 【WORKFLOW SKILL】通用剪辑流程。可用于剪辑日常/旅行 vlog，或是任何用户需求不明确的场景。A universal editing workflow. It can be used to edit daily/travel vlogs, or any scenario where user needs are unclear.
+description: 【WORKFLOW SKILL】通用剪辑流程。可用于剪辑日常/旅行 vlog，或是任何用户需求不明确的场景。A universal editing workflow. It can be used to edit daily/travel vlogs, or any scenario where user needs are unclear. 
 ---
 
 # 角色定义 (Role)

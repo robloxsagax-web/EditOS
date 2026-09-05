@@ -86,14 +86,14 @@ dist.
 ### The Creator Workflow is Broken
 
 | ⚠️ Pain Point | 💔 Reality | 😱 Cost |
-|---|---|---|---|
+| :--- | :--- | :--- |
 | **Manual editing** | Cutting, trims, transitions, sync per-video | **3–6 hrs** per YT video |
-| **Editor bottleneck** | Good freelancers book out; overseas hires are slow to iterate | **$500–2000** / month per creator |
-| **Scripting + voiceover** | Writing narration, recording/paying VO, or robot-voice TTS | **1–2 hrs** + fees, robotic results |
+| **Editor bottleneck** | Good freelancers book out; overseas hires are slow to iterate | **$500–$2,000** / month per creator |
+| **Scripting + voiceover** | Writing narration, recording/paying VO, or robot-voice TTS | **1–2 hrs** + fees; robotic results |
 | **Music rights & sync** | Licensing BGM, matching energy to cuts | Copyright strikes; endless auditioning |
 | **Repetitive format** | Same intro/outro/pace/effects, re-built every upload | Burnout; inconsistent brand quality |
 
-###What we built instead
+### What we built instead
 
 | Before EditOS | With EditOS |
 |--------|--------|
@@ -126,7 +126,7 @@ dist.
 | 🎨 **Effect & Font Recommendations** | LLM picks fonts/effects that match vibe | Consistent branding, zero design skill |
 | 🧠 **Speech Rough-Cut** | Re-slices clips to remove filler/pauses from ASR sentence timing + LLM judgment | Podcast/long-form gold |
 
-###🖥️ Product & UX
+### 🖥️ Product & UX
 
 | Feature | Detail |
 |---------|--------|
@@ -140,7 +140,7 @@ dist.
 | 🛡️ **Graceful everything** | LLM JSON hiccup → sane fallback (filter→all, group→single, BGM→first) — never crash |
 | 🔒 **Local-first privacy** | Media stays on *your* box; cloud only for the AI bits you opt in to |
 
-###⚙️ Engineering
+### ⚙️ Engineering
 
 | Feature | Detail |
 |---------|--------|
@@ -193,7 +193,7 @@ flowchart LR
     API --> UI
 ```
 
-###The Editing Node DAG
+### The Editing Node DAG
 
 ```mermaid
 flowchart TD
@@ -221,7 +221,7 @@ flowchart TD
     M --> R
 ```
 
-###A Single Node Call — Request Lifecycle
+### A Single Node Call — Request Lifecycle
 
 ```mermaid
 sequenceDiagram
@@ -309,7 +309,7 @@ chmod +x download.sh
 pip install -r requirements.txt
 ```
 
-###Run the Web Studio
+### Run the Web Studio
 
 ```bash
 uvicorn agent_fastapi:app --host 127.0.0.1 --port 8005
@@ -323,13 +323,13 @@ Open **http://127.0.0.1:8005** → pick your models → paste a brief → watch 
 bash run.sh                # installs helper + boots server
 ```
 
-###CLI Mode
+### CLI Mode
 
 ```bash
 python cli.py
 ```
 
-###Docker (optional)
+### Docker (optional)
 
 ```bash
 docker run -v $(pwd)/config.toml:/app/config.toml \
@@ -497,12 +497,12 @@ EditOS/
 
 ## 🧠 Devpost Judging-Criteria Cheat-Sheet
 
-| Criterion (30/20/20/30 | How EditOS nails it |
-|---|---|---|
-| **Functionality (30%** | End-to-end MP4 produced from chat; auto shot-split, VLM captions, script+V.O.+BGM, render — real, runs today; CLI also works headless; resilient fallbacks mean it fails soft |
-| **Creativity (20%** | Fusing MCP + ReAct + TransNet/FAISS/local-ASR into one production-ish, fallback-first, node-graph pipeline — not the 100th llm-chat demo |
-| **Technical execution (20%** | 18-node declarative DAG, dual-model (LLM/VLM) routing via MCP sampling, deterministic render math, pydantic-vetted settings, artifact store+GC, byte-compile-clean (~17k LOC total |
-| **Real-world usefulness (30%** | 3–6 h → 5–10 min; bilingual; self-hosted privacy; reusable skills → batch/rebrand one-prompt; asset library integration (BGM/fonts/stock |
+| Criterion | Weight | How EditOS Nails It |
+| :--- | :--- | :--- |
+| **Functionality** | 30% | End-to-end MP4 produced from chat; auto shot-split, VLM captions, script+V.O.+BGM, render — real, runs today; CLI also works headless; resilient fallbacks mean it fails soft. |
+| **Creativity** | 20% | Fusing MCP + ReAct + TransNet/FAISS/local-ASR into one production-ish, fallback-first, node-graph pipeline — not the 100th LLM-chat demo. |
+| **Technical Execution** | 20% | 18-node declarative DAG, dual-model (LLM/VLM) routing via MCP sampling, deterministic render math, Pydantic-vetted settings, artifact store+GC, byte-compile-clean (~17k LOC total). |
+| **Real-World Usefulness** | 30% | 3–6 hours → 5–10 minutes; bilingual; self-hosted privacy; reusable skills → batch/rebrand one-prompt; asset library integration (BGM/fonts/stock). |
 
 > **Submit checklist:** ✅ demo videos (see [Demo](#-demo--edit-a-video-from-raw-footage-in-minutes)); ✅ repo link; ✅ screenshots (see [App Interface](#-app-interface)); ✅ working app (run `run.sh`; ✅ 1–4 person team (any size welcome) — you can even show the live LAN demo off `127.0.0.1:8005`.
 
@@ -523,4 +523,4 @@ EditOS/
 
 **MIT** — see [`LICENSE`](LICENSE). Edit freely, ship your fork, monetize your tool. If you build something cool on top, we'd love a shout-out. 🌟
 
-<p align="center">**Built by an AI agent (OpenHands) on behalf of robloxsagax-web · Made for humans, edited by machines** 🎬</p>
+<p align="center"><strong>Built with an AI agent (OpenHands) on behalf of robloxsagax-web · Made for humans, edited by machines</strong> 🎬</p>

@@ -35,14 +35,16 @@ class GenerateScriptNode(BaseNode):
 
     async def process(self, node_state: NodeState, inputs: Dict[str, Any]) -> Any:
         clip_info = inputs["split_shots"]["clips"]
-        clip_captions = inputs["understand_clips"]["clip_captions"]
-        overall = inputs["understand_clips"]["overall"]
+        # Handle missing understand_clips (no-analysis mode)
+        understand_clips = inputs.get("understand_clips", {}) or {}
+        clip_captions = understand_clips.get("clip_captions") or []
+        overall = understand_clips.get("overall", "unknown")
         groups = inputs["group_clips"]["groups"]
         user_request = inputs["user_request"]
         llm = node_state.llm
 
         duration_lookup = _build_duration_lookup(clip_info)
-        caption_lookup = _build_caption_lookup(clip_captions)
+        caption_lookup = _build_caption_lookup(clip_captions) if clip_captions else {}
 
         group_ids: list[str] = [g.get("group_id","") for g in (groups or []) if g.get("group_id")]
         group_ids_set = set(group_ids)

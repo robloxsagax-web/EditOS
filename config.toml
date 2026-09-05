@@ -13,16 +13,16 @@ outputs_dir = "./outputs"
 # Configure via environment variables - see .env.example
 
 [llm]
-model = "openai/gpt-4o-mini"
-base_url = "${OPENSTORYLINE_LLM_BASE_URL}"
+model = "${OPENSTORYLINE_LLM_MODEL:-openai/gpt-4o-mini}"
+base_url = "${OPENSTORYLINE_LLM_BASE_URL:-https://openrouter.ai/api/v1}"
 api_key = "${OPENSTORYLINE_LLM_API_KEY}"
 timeout = 30.0
 temperature = 0.1
 max_retries = 2
 
 [vlm]
-model = "${OPENSTORYLINE_VLM_MODEL}"
-base_url = "${OPENSTORYLINE_VLM_BASE_URL}"
+model = "qwen/qwen-vl-plus"
+base_url = "https://openrouter.ai/api/v1"
 api_key = "${OPENSTORYLINE_VLM_API_KEY}"
 timeout = 20.0
 temperature = 0.1
@@ -58,7 +58,7 @@ skill_dir = "./.storyline/skills"
 
 # =========== pexels ==========
 [search_media]
-pexels_api_key = "${OPENSTORYLINE_PEXELS_API_KEY}"
+pexels_api_key = "test"
 
 # ============= Shot Segmentation =============
 [split_shots]
@@ -102,11 +102,10 @@ api_key = ""
 
 [generate_voiceover.providers.elevenlabs]
 base_url = "https://api.elevenlabs.io"
-api_key = "${OPENSTORYLINE_GENERATE_VOICEOVER__PROVIDERS__ELEVENLABS__API_KEY}"
+api_key = "test"
 
 # ============= AI Transition (disabled by default) ===================
 [generate_ai_transition]
-enabled = false
 
 [generate_ai_transition.providers.dashscope]
 model_name = ""

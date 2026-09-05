@@ -13,8 +13,8 @@ outputs_dir = "./outputs"
 # Configure via environment variables - see .env.example
 
 [llm]
-model = "${OPENSTORYLINE_LLM_MODEL:-openai/gpt-4o-mini}"
-base_url = "${OPENSTORYLINE_LLM_BASE_URL:-https://openrouter.ai/api/v1}"
+model = "openai/gpt-4o-mini"
+base_url = "https://openrouter.ai/api/v1"
 api_key = "${OPENSTORYLINE_LLM_API_KEY}"
 timeout = 30.0
 temperature = 0.1

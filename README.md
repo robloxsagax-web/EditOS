@@ -1,16 +1,16 @@
 <div align="center">
   <a href="#gh-light-mode-only">
     <img
-      src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/openstoryline/web/static/brand_white.png"
-      alt="openstoryline"
+      src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/web/static/brand_white.png"
+      alt="editos"
       width="70%"
     />
   </a>
 
   <a href="#gh-dark-mode-only">
     <img
-      src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/openstoryline/web/static/brand_black.png"
-      alt="openstoryline"
+      src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/web/static/brand_black.png"
+      alt="editos"
       width="70%"
     />
   </a>
@@ -20,19 +20,19 @@
     <a href="./README.md">🌏 English</a>
   </p>
   <p>
-    <a href="https://huggingface.co/FireRedTeam" target="_blank"><img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-FireRedTeam-ffc107?color=ffc107&logoColor=white" style="display: inline-block;"/></a>
-    <a href="https://www.modelscope.cn/studios/FireRedTeam/FireRed-OpenStoryline" target="_blank">
+    <a href="https://huggingface.co/EditOSTeam" target="_blank"><img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-EditOSTeam-ffc107?color=ffc107&logoColor=white" style="display: inline-block;"/></a>
+    <a href="https://www.modelscope.cn/studios/EditOSTeam/FireRed-EditOS" target="_blank">
         <img alt="ModelScope Demo" src="https://img.shields.io/badge/ModelScope-Demo-4B6CFF?style=flat&logo=modelscope&logoColor=white" style="display: inline-block;"/></a>
     <img src="https://img.shields.io/badge/python-≥3.11-blue" alt="Python">
     <img src="https://img.shields.io/badge/license-Apache%202.0-blue" alt="License">
-    <a href="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/openstoryline/docs/media/others/group_20260329.jpg"><img src="https://img.shields.io/badge/Xiaohongshu-Group-E9DBFC?style=flat&logo=xiaohongshu&logoColor=white" alt="xiaohongshu"></a>
-    <a href="https://hellogithub.com/repository/FireRedTeam/FireRed-OpenStoryline" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=fb457793a87e4bdab9c4f5ca26451a7f&claim_uid=4QpcNTrHEAg3O8n&theme=small" alt="Featured｜HelloGitHub" /></a>
+    <a href="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/media/others/group_20260329.jpg"><img src="https://img.shields.io/badge/Xiaohongshu-Group-E9DBFC?style=flat&logo=xiaohongshu&logoColor=white" alt="xiaohongshu"></a>
+    <a href="https://hellogithub.com/repository/EditOSTeam/FireRed-EditOS" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=fb457793a87e4bdab9c4f5ca26451a7f&claim_uid=4QpcNTrHEAg3O8n&theme=small" alt="Featured｜HelloGitHub" /></a>
   </p>
 </div>
 
 <div align="center">
 
-[🤗 HuggingFace Demo](https://fireredteam-firered-openstoryline.hf.space/) • [🌐 Homepage](https://fireredteam.github.io/demos/firered_openstoryline/)
+[🤗 HuggingFace Demo](https://fireredteam-firered-editos.hf.space/) • [🌐 Homepage](https://fireredteam.github.io/demos/firered_editos/)
 
 </div>
 
@@ -40,7 +40,7 @@
   <video src="https://github.com/user-attachments/assets/9116767e-bcd9-417a-93d8-2db4d3d5df8e" width="70%" poster=""> </video>
 </div>
 
-**FireRed-OpenStoryline** turns complex video creation into natural, intuitive conversations. Designed with both accessibility and enterprise-grade reliability in mind, FireRed-OpenStoryline makes video creation easy and friendly to beginners and creative enthusiasts alike.
+**FireRed-EditOS** turns complex video creation into natural, intuitive conversations. Designed with both accessibility and enterprise-grade reliability in mind, FireRed-EditOS makes video creation easy and friendly to beginners and creative enthusiasts alike.
 > Deriving from the saying "A single spark can start a prairie fire", the name FireRed represents our vision: to spread our SOTA capabilities—honed in real-world scenarios—like sparks across the wilderness, igniting the imagination of developers worldwide to reshape the future of AI together.
 
 ## ✨ Key Features
@@ -54,8 +54,8 @@
 
 * 🎬 **2026-04-02**: Added the **AI Transition Generation** feature, which automatically creates transition shots based on the ending frame of one clip, the opening frame of the next, and a natural-language description, making scene transitions smoother and the narrative more coherent.
 * 🚀 **2026-03-22**: Introduced an **ASR-based rough cut skill for speech videos**, enabling automatic removal of filler words, disfluencies, and repeated sentences, with timestamp-aligned segmentation for cleaner and more efficient speech editing workflows.
-* 🔥 **2026-03-12**: Integrated with **OpenClaw**, adding two OpenClaw Skills — `openstoryline-install` and `openstoryline-use` — covering the initial installation/first-run workflow and the actual usage workflow, respectively. Also added Skill usage instructions for **Claude Code**, making it easier for **Claude Code** to install and invoke the project in accordance with the repository guidelines.
-* **2026-02-10**: FireRed-OpenStoryline was officially open-sourced.
+* 🔥 **2026-03-12**: Integrated with **OpenClaw**, adding two OpenClaw Skills — `editos-install` and `editos-use` — covering the initial installation/first-run workflow and the actual usage workflow, respectively. Also added Skill usage instructions for **Claude Code**, making it easier for **Claude Code** to install and invoke the project in accordance with the repository guidelines.
+* **2026-02-10**: FireRed-EditOS was officially open-sourced.
 
 > <sub>
 > ⚠️ Note: AI transitions rely on third-party AIGC video generation services, and <b>the cost is relatively high</b>. Due to variations in source material quality, prompts, and model performance, the generated results are somewhat unpredictable. It is recommended to enable this feature only when needed.
@@ -64,7 +64,7 @@
 ## 🏗️ Architecture
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FireRedTeam/fireredteam.github.io/main/demos/firered_openstoryline/pics/structure.jpg" alt="openstoryline architecture" width="800">
+  <img src="https://raw.githubusercontent.com/EditOSTeam/fireredteam.github.io/main/demos/firered_editos/pics/structure.jpg" alt="editos architecture" width="800">
 </p>
 
 ## ✨ Demo
@@ -97,55 +97,55 @@
 </table>
 
 > <sub>
-> 🎨 <b>Effects Note:</b> Due to licensing restrictions on open-source assets, the elements (fonts/music) in the first row represent only basic effects. We <b>highly recommend</b> following the <a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/blob/main/docs/source/zh/guide.md#2-%E9%AB%98%E7%BA%A7%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">Custom Asset Library Tutorial</a> to unlock commercial-grade fonts, music, and VFX for significantly better video quality.<br>
+> 🎨 <b>Effects Note:</b> Due to licensing restrictions on open-source assets, the elements (fonts/music) in the first row represent only basic effects. We <b>highly recommend</b> following the <a href="https://github.com/EditOSTeam/FireRed-EditOS/blob/main/docs/source/zh/guide.md#2-%E9%AB%98%E7%BA%A7%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">Custom Asset Library Tutorial</a> to unlock commercial-grade fonts, music, and VFX for significantly better video quality.<br>
 > ⚠️ <b>Quality Note:</b> To save space in the README, the demo videos are heavily compressed. The actual output retains the original resolution by default and supports custom dimensions.<br>
-> In the Demo: The <b>first row</b> shows default open-source assets (Restricted Mode); the <b>second row</b> shows Xiaohongshu App "AI Clip" asset library effects. 👉 <a href="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/openstoryline/docs/media/others/ai_cut_guide.png">Click to view tutorial</a><br>
+> In the Demo: The <b>first row</b> shows default open-source assets (Restricted Mode); the <b>second row</b> shows Xiaohongshu App "AI Clip" asset library effects. 👉 <a href="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/media/others/ai_cut_guide.png">Click to view tutorial</a><br>
 > ⚖️ <b>Disclaimer:</b> User footage and brand logos shown in the demos are for technical demonstration purposes only. Ownership belongs to the original creators. Please contact us for copyright concerns.
 > </sub>
 
 ## 🤖 Use Through an Agent
 
-FireRed-OpenStoryline supports usage through Agent Skills.
+FireRed-EditOS supports usage through Agent Skills.
 We provide two Skills:
 
-* `openstoryline-install`: for installation, configuration, and first-run verification.
-* `openstoryline-use`: for starting the service and running the actual video editing workflow.
+* `editos-install`: for installation, configuration, and first-run verification.
+* `editos-use`: for starting the service and running the actual video editing workflow.
 
 ### OpenClaw
 
-Just tell OpenClaw: “I want to try OpenStoryline. Help me install the required Skills,” and it will automatically trigger the installation.
+Just tell OpenClaw: “I want to try EditOS. Help me install the required Skills,” and it will automatically trigger the installation.
 If the installation runs into problems, use the following commands to install them manually:
 
 ```bash
-openclaw skills install openstoryline-install
-openclaw skills install openstoryline-use
+openclaw skills install editos-install
+openclaw skills install editos-use
 ```
 
 If your current OpenClaw version does not support `openclaw skills install`, or if installation still fails, you can use ClawHub instead:
 
 ```bash
-npx clawhub install openstoryline-install
-npx clawhub install openstoryline-use
+npx clawhub install editos-install
+npx clawhub install editos-use
 ```
 
-Once installed, you only need to send your media assets to OpenClaw, and it can help you complete the entire process from installing FireRed-OpenStoryline to generating the final video.
+Once installed, you only need to send your media assets to OpenClaw, and it can help you complete the entire process from installing FireRed-EditOS to generating the final video.
 
 ### Claude Code
 
 This repository comes with built-in Claude Code Skills.
-If you start Claude Code from the **root directory of this repository**, you can use the project-level Skills included in the repo directly. Claude Code can then help you install and use FireRed-OpenStoryline.
+If you start Claude Code from the **root directory of this repository**, you can use the project-level Skills included in the repo directly. Claude Code can then help you install and use FireRed-EditOS.
 
 ```bash
-/openstoryline-install
-/openstoryline-use
+/editos-install
+/editos-use
 ```
 
 If you want to install these two Skills into your own global Claude Code configuration, run:
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R .claude/skills/openstoryline-install ~/.claude/skills/
-cp -R .claude/skills/openstoryline-use ~/.claude/skills/
+cp -R .claude/skills/editos-install ~/.claude/skills/
+cp -R .claude/skills/editos-use ~/.claude/skills/
 ```
 
 ### Other Compatible Agents (Experimental)
@@ -154,15 +154,15 @@ These Skills are based on an open Agent Skills format, so in theory they can als
 For example, you can install them into Codex via the Skills CLI:
 
 ```bash
-npx skills add FireRedTeam/FireRed-OpenStoryline --skill openstoryline-install --agent codex
-npx skills add FireRedTeam/FireRed-OpenStoryline --skill openstoryline-use --agent codex
+npx skills add EditOSTeam/FireRed-EditOS --skill editos-install --agent codex
+npx skills add EditOSTeam/FireRed-EditOS --skill editos-use --agent codex
 ```
 
 Or use the commands below with the `--global` flag to install these Skills into the user-level directory so they are available across projects:
 
 ```bash
-npx skills add FireRedTeam/FireRed-OpenStoryline --skill openstoryline-install --global
-npx skills add FireRedTeam/FireRed-OpenStoryline --skill openstoryline-use --global
+npx skills add EditOSTeam/FireRed-EditOS --skill editos-install --global
+npx skills add EditOSTeam/FireRed-EditOS --skill editos-use --global
 ```
 
 ## 📦 Install
@@ -170,8 +170,8 @@ npx skills add FireRedTeam/FireRed-OpenStoryline --skill openstoryline-use --glo
 ```
 # If git is not installed, refer to the official website for installation: https://git-scm.com/install/
 # Or manually download the code
-git clone https://github.com/FireRedTeam/FireRed-OpenStoryline.git
-cd FireRed-OpenStoryline
+git clone https://github.com/EditOSTeam/FireRed-EditOS.git
+cd FireRed-EditOS
 ```
 ### 2. Create a virtual environment
 
@@ -180,8 +180,8 @@ Install Conda according to the official guide (Miniforge is recommended, it is s
 
 ```
 # Recommended python>=3.11
-conda create -n storyline python=3.11
-conda activate storyline
+conda create -n editos python=3.11
+conda activate editos
 ```
 ### 3. 📦 Resource Download & Installation
 #### 3.1 Automatic Installation (Linux and macOS only)
@@ -214,7 +214,7 @@ sh build_env.sh
     ```bash
     pip install -r requirements.txt
     ```
-    If you plan to use `storyline.local_asr`, make sure `torchaudio` is installed in the same environment.
+    If you plan to use `editos.local_asr`, make sure `torchaudio` is installed in the same environment.
 
 ##### B. Windows
 
@@ -222,14 +222,14 @@ sh build_env.sh
 
   - Step 2: Download and Extract:
 
-    *   [Download Models (models.zip)](https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/openstoryline/models.zip) -> Extract to the `.storyline` directory.
+    *   [Download Models (models.zip)](https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/models.zip) -> Extract to the `.editos` directory.
 
-    *   [Download Resources (resource.zip)](https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/openstoryline/resource.zip) -> Extract to the `resource` directory.
+    *   [Download Resources (resource.zip)](https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/resource.zip) -> Extract to the `resource` directory.
   - Step 3:  **Install Dependencies**:
     ```bash
     pip install -r requirements.txt
     ```
-    If you plan to use `storyline.local_asr`, make sure `torchaudio` is installed in the same environment.
+    If you plan to use `editos.local_asr`, make sure `torchaudio` is installed in the same environment.
 
 ## 🚀 Quick Start
 
@@ -241,12 +241,12 @@ Note: Before starting, you need to configure the API-Key in config.toml first. F
 #### MacOS or Linux
 
 ```bash
-PYTHONPATH=src python -m open_storyline.mcp.server
+PYTHONPATH=src python -m edit_os.mcp.server
 ```
 
 #### Windows
 ```
-$env:PYTHONPATH="src"; python -m open_storyline.mcp.server
+$env:PYTHONPATH="src"; python -m edit_os.mcp.server
 ```
 
 ### 2. Start the conversation interface
@@ -269,11 +269,11 @@ $env:PYTHONPATH="src"; python -m open_storyline.mcp.server
 ```bash
 # Pull image from Docker Hub official repository
 # Recommended for users outside China
-docker pull openstoryline/openstoryline:v1.0.1
+docker pull editos/editos:v1.0.1
 
 # Pull image from Alibaba Cloud Container Registry
 # Recommended for users in China (faster and more stable)
-docker pull crpi-6knxem4w8ggpdnsn.cn-shanghai.personal.cr.aliyuncs.com/openstoryline/openstoryline:v1.0.1
+docker pull crpi-6knxem4w8ggpdnsn.cn-shanghai.personal.cr.aliyuncs.com/editos/editos:v1.0.1
 ```
 
 ### Start the Container
@@ -283,14 +283,14 @@ docker run \
   -v $(pwd)/outputs:/app/outputs \
   -v $(pwd)/run.sh:/app/run.sh \
   -p 7860:7860 \
-  openstoryline/openstoryline:v1.0.1
+  editos/editos:v1.0.1
 ```
 After starting, access the Web interface at http://0.0.0.0:7860
 
 ## 📁 Project Structure
 ```
-FireRed-OpenStoryline/
-├── 🎯 src/open_storyline/           Core application
+FireRed-EditOS/
+├── 🎯 src/edit_os/           Core application
 │   ├── mcp/                         🔌 Model Context Protocol
 │   ├── nodes/                       🎬 Video processing nodes
 │   ├── skills/                      🛠️ Agent skills library
@@ -349,4 +349,4 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## ⭐ Star History
 
-<div align="center"> <p> <img width="800" src="https://api.star-history.com/svg?repos=FireRedTeam/FireRed-OpenStoryline&type=Date" alt="Star-history"> </p> </div>
+<div align="center"> <p> <img width="800" src="https://api.star-history.com/svg?repos=EditOSTeam/FireRed-EditOS&type=Date" alt="Star-history"> </p> </div>

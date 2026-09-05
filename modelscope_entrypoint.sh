@@ -54,12 +54,12 @@ echo "LLM Model: $(grep 'model =' $ROOT_DIR/config.toml | head -1)"
 echo "VLM Model: $(grep 'model =' $ROOT_DIR/config.toml | tail -1)"
 
 # Download models if needed
-if [ ! -f ".storyline/models/transnetv2-pytorch-weights.pth" ]; then
+if [ ! -f ".editos/models/transnetv2-pytorch-weights.pth" ]; then
     echo "Downloading TransNetV2 model..."
-    mkdir -p .storyline/models
-    wget -q --show-progress -O .storyline/models/transnetv2-pytorch-weights.pth \
+    mkdir -p .editos/models
+    wget -q --show-progress -O .editos/models/transnetv2-pytorch-weights.pth \
         "https://download.openmmlab.com/mmaction/others/transnetv2.pth" || \
-    wget -q --show-progress -O .storyline/models/transnetv2-pytorch-weights.pth \
+    wget -q --show-progress -O .editos/models/transnetv2-pytorch-weights.pth \
         "https://github.com/TooTouch/TransNetV2/releases/download/v1.0.0/transnetv2-pytorch-weights.pth" || \
     echo "Warning: Could not download TransNetV2 model, will use fallback"
 fi
@@ -67,14 +67,14 @@ fi
 # Create necessary directories
 mkdir -p outputs/media
 mkdir -p outputs
-mkdir -p .storyline/.server_cache
-mkdir -p .storyline/skills
+mkdir -p .editos/.server_cache
+mkdir -p .editos/skills
 
 HOST="${HOST:-0.0.0.0}"
 PORT="${PORT:-7860}"
 
 echo "Starting MCP server on port 8001..."
-python -m open_storyline.mcp.server &
+python -m edit_os.mcp.server &
 MCP_PID=$!
 
 echo "Starting Web UI on $HOST:$PORT..."

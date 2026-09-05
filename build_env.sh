@@ -28,7 +28,7 @@ print_info() {
 echo ""
 echo "╔════════════════════════════════════════════════════════════════╗"
 echo "║    Storyline 项目依赖安装脚本 | Dependency Installation       ║"
-echo "║    使用 conda activate storyline 激活环境后运行                ║"
+echo "║    使用 conda activate editos 激活环境后运行                ║"
 echo "╚════════════════════════════════════════════════════════════════╝"
 echo ""
 
@@ -61,18 +61,18 @@ echo "[1/4] 检查 conda 环境... | Checking conda environment..."
 if [ -z "$CONDA_DEFAULT_ENV" ]; then
     print_error "未检测到 conda 环境 | No conda environment detected"
     echo ""
-    echo "请先运行: conda activate storyline"
-    echo "Please run: conda activate storyline"
+    echo "请先运行: conda activate editos"
+    echo "Please run: conda activate editos"
     exit 1
 fi
 
-if [ "$CONDA_DEFAULT_ENV" != "storyline" ]; then
+if [ "$CONDA_DEFAULT_ENV" != "editos" ]; then
     print_warning "当前环境: $CONDA_DEFAULT_ENV"
     echo ""
-    read -p "建议使用 storyline 环境，是否继续? | Continue anyway? (y/n) " -n 1 -r
+    read -p "建议使用 editos 环境，是否继续? | Continue anyway? (y/n) " -n 1 -r
     echo ""
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-        echo "请运行: conda activate storyline"
+        echo "请运行: conda activate editos"
         exit 1
     fi
 else

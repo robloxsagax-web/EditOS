@@ -6,8 +6,8 @@ import json
 from openai import OpenAI
 from tqdm import tqdm
 
-from src.open_storyline.utils.prompts import get_prompt
-from src.open_storyline.utils.parse_json import parse_json_dict
+from src.edit_os.utils.prompts import get_prompt
+from src.edit_os.utils.parse_json import parse_json_dict
 
 # -------------------------------
 # API client (DeepSeek / OpenAI compatible)

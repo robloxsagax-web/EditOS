@@ -15,13 +15,13 @@ SRC_DIR = os.path.join(ROOT_DIR, "src")
 if SRC_DIR not in sys.path:
     sys.path.insert(0, SRC_DIR)
 
-from open_storyline.agent import ClientContext, build_agent
-from open_storyline.utils.prompts import get_prompt
-from open_storyline.utils.media_handler import scan_media_dir
-from open_storyline.config import load_settings, default_config_path
-from open_storyline.storage.agent_memory import ArtifactStore
-from open_storyline.mcp.hooks.node_interceptors import ToolInterceptor
-from open_storyline.mcp.hooks.chat_middleware import PrintStreamingTokens
+from edit_os.agent import ClientContext, build_agent
+from edit_os.utils.prompts import get_prompt
+from edit_os.utils.media_handler import scan_media_dir
+from edit_os.config import load_settings, default_config_path
+from edit_os.storage.agent_memory import ArtifactStore
+from edit_os.mcp.hooks.node_interceptors import ToolInterceptor
+from edit_os.mcp.hooks.chat_middleware import PrintStreamingTokens
 
 _MEDIA_STATS_INFO_IDX = 1
 

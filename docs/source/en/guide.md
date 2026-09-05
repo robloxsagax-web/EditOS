@@ -1,10 +1,10 @@
-# OpenStoryline User Guide
+# EditOS User Guide
 
 ---
 
 ## 0. Environment Setup
 
-See the [README](https://github.com/FireRedTeam/FireRed-OpenStoryline/blob/main/README.md) section.
+See the [README](https://github.com/EditOSTeam/FireRed-EditOS/blob/main/README.md) section.
 
 ## 1. Basic Usage
 
@@ -35,7 +35,7 @@ If you just want to explore it first, you can also use it like a normal chat mod
 
 ### 1.2 Editing
 
-OpenStoryline supports **intent intervention and partial redo at any stage**. After a step completes, you can simply describe what you want to change in one sentence. The agent will locate the step that needs to be rerun, without restarting from the beginning. For example:
+EditOS supports **intent intervention and partial redo at any stage**. After a step completes, you can simply describe what you want to change in one sentence. The agent will locate the step that needs to be rerun, without restarting from the beginning. For example:
 
 * Remove the clip where the camera is filming the sky.
 * Switch to a more upbeat background music.
@@ -204,7 +204,7 @@ Auto tags may not be fully accurate. If you need strong recommendations for spec
 
 The repository includes two built-in Skills: one for writing-style imitation and another for saving editing workflows. If you want more custom skills, you can add them as follows:
 
-1. Create a new folder under `.storyline/skills`.
+1. Create a new folder under `.editos/skills`.
 2. Inside that folder, create a file named `SKILL.md`.
 3. The `SKILL.md` must start with:
 

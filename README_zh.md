@@ -1,38 +1,29 @@
+# EditOS
+
 <div align="center">
   <a href="#gh-light-mode-only">
-    <img
-      src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/web/static/brand_white.png"
-      alt="editos"
-      width="70%"
-    />
+    <img src="web/static/brand_white.svg" alt="EditOS" width="70%"/>
   </a>
-
   <a href="#gh-dark-mode-only">
-    <img
-      src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/web/static/brand_black.png"
-      alt="editos"
-      width="70%"
-    />
+    <img src="web/static/brand_black.svg" alt="EditOS" width="70%"/>
   </a>
-
+  
   <p>
-    <a href="./README_zh.md">🇨🇳 简体中文</a> | 
+    <a href="./README_zh.md">🇨🇳 简体中文</a> |
     <a href="./README.md">🌏 English</a>
   </p>
   <p>
-    <a href="https://huggingface.co/EditOSTeam" target="_blank"><img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-EditOSTeam-ffc107?color=ffc107&logoColor=white" style="display: inline-block;"/></a>
-    <a href="https://www.modelscope.cn/studios/EditOSTeam/FireRed-EditOS" target="_blank">
+    <a href="https://www.modelscope.cn/studios/Muhammad_Mujtaba/EditOS" target="_blank">
         <img alt="ModelScope Demo" src="https://img.shields.io/badge/ModelScope-Demo-4B6CFF?style=flat&logo=modelscope&logoColor=white" style="display: inline-block;"/></a>
+    <a href="https://github.com/robloxsagax-web/EditOS" target="_blank"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-EditOS-181717?style=flat&logo=github&logoColor=white" style="display: inline-block;"/></a>
     <img src="https://img.shields.io/badge/python-≥3.11-blue" alt="Python">
-    <img src="https://img.shields.io/badge/license-Apache%202.0-blue" alt="License">
-    <a href="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/media/others/group_20260329.jpg"><img src="https://img.shields.io/badge/Xiaohongshu-Group-E9DBFC?style=flat&logo=xiaohongshu&logoColor=white" alt="xiaohongshu"></a>
-    <a href="https://hellogithub.com/repository/EditOSTeam/FireRed-EditOS" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=fb457793a87e4bdab9c4f5ca26451a7f&claim_uid=4QpcNTrHEAg3O8n&theme=small" alt="Featured｜HelloGitHub" /></a>
+    <img src="https://img.shields.io/badge/license-MIT-blue" alt="License">
   </p>
 </div>
 
 <div align="center">
 
-[🤗 HuggingFace Demo](https://fireredteam-firered-editos.hf.space/) • [🌐 Homepage](https://fireredteam.github.io/demos/firered_editos/)
+[🌐 ModelScope 演示](https://www.modelscope.ai/studios/Muhammad_Mujtaba/EditOS/summary) • [📦 GitHub](https://github.com/robloxsagax-web/EditOS)
 
 </div>
 
@@ -40,109 +31,51 @@
   <video src="https://github.com/user-attachments/assets/9116767e-bcd9-417a-93d8-2db4d3d5df8e" width="70%" poster=""> </video>
 </div>
 
-
-**FireRed-EditOS** 将复杂的视频创作转化为自然直观的对话体验。兼顾易用性和企业级可靠性，让视频创作对初学者和创意爱好者都变得简单友好。
-> FireRed，字面意思红色的火苗，取自“星星之火，可以燎原”。我们将这团火苗取名为 FireRed，就是希望将我们在真实场景中打磨出的 SOTA 能力，像火种一样撒向旷野，点燃全球开发者的想象力，共同改变这个 AI 的世界。
+**EditOS** 将复杂的视频创作转化为自然、直观的对话体验。EditOS 在设计和开发时兼顾了易用性和企业级可靠性，让视频创作对初学者和创意爱好者都变得简单友好。
 
 ## ✨ 核心特性
-- 🌐 **智能素材搜索与整理**： 自动在线搜索并下载符合你需求的图片和视频片段。基于用户主题素材进行片段拆分与内容理解。
-- ✍️ **智能文案生成**： 结合用户主题、画面理解与情绪识别，自动构建故事线及契合的旁白。内置少样本（Few-shot）仿写能力，支持通过输入参考文本（如种草测评、日常碎碎念等）定义文案风格，实现语感、节奏与句式的精准复刻。
-- 🎵 **智能推荐音乐、配音与字体**：支持导入私有歌单，根据视频内容和情绪自动推荐背景音乐并智能卡点。只需描述"克制一点","偏情绪化","像纪录片旁白"等风格，系统即可匹配合适的配音与字体，保证整体风格协调统一。
-- 💬 **对话式精修**：支持快速删减、替换或重组片段；修改任意字幕文案；调整文字颜色、字体、描边、位置等视觉元素——所有操作均通过自然语言完成，即改即得。
-- ⚡ **剪辑技能沉淀**： 可一键保存为专属剪辑Skill，记录完整的剪辑逻辑。下次只需更换素材并选择对应Skill，即可快速复刻同款风格，实现高效批量生产。
+- 🌐 **智能媒体搜索与整理**：自动搜索并下载符合您需求的图片和视频片段。基于主题媒体进行片段分割和内容理解。
+- ✍️ **智能脚本生成**：结合用户主题、视觉理解和情感识别，自动构建故事线和情境化旁白。支持 Few-shot 风格迁移，允许用户通过参考文本定义特定文案风格（如产品评测、随性 vlog），实现精确的语调、节奏和句式复制。
+- 🎵 **智能音乐、配音与字体推荐**：支持个人播放列表导入，根据内容和情绪自动推荐背景音乐，智能节拍同步。只需描述您想要的风格——例如"克制"、"情感化"或"纪录片风格"——系统就会匹配合适的配音和字体，确保统一的审美风格。
+- 💬 **对话式精修**：快速剪切、替换或重新排序片段。编辑脚本和微调视觉细节——包括颜色、字体、描边和位置。所有编辑都通过自然语言提示完成，立即生效。
+- ⚡**编辑技能归档**：将完整的编辑工作流程保存为自定义技能。只需更换媒体并应用相应技能，即可立即复制风格，实现高效批量创作。
 
-## NEWS
-- 🎬 **2026-04-02**：新增 **AI 转场生成** 功能，支持基于相邻片段的首尾画面与自然语言描述自动生成过渡镜头，让镜头衔接更自然、叙事更连贯。
-- 🚀 **2026-03-22**：新增**基于ASR的口播视频粗剪Skill**，支持自动去除口头禅、语气词和重复表达，并结合时间戳进行精准切分，提升口播类视频的剪辑效率与成片质量。
-- 🔥 **2026-03-12**：接入**OpenClaw**，新增 `editos-install` 与 `editos-use` 两个 OpenClaw Skills，分别覆盖安装首跑与实际使用流程；添加面向 **Claude Code** 的 Skill 使用说明，方便 **Claude Code** 依据仓库规范完成安装与调用。
-- **2026-2-10**：FireRed-EditOS 正式开源。
+## 最新动态
 
-> <sub>
-> ⚠️ 注意：AI 转场依赖第三方 AIGC 视频生成服务，<b>成本相对较高</b>。受素材质量、提示词和模型波动影响，生成结果存在一定随机性，建议按需开启。
-> </sub>
+* 🎬 **2026-08-05**: v1.0.0 发布，具备全面的视频编辑能力、AI 转场和对话式界面。
+* 🎬 **2026-04-02**: 新增 **AI 转场生成**功能，基于前一个片段的结尾帧、后一个片段的开头帧以及自然语言描述，自动创建过渡镜头，使场景转换更流畅、叙事更连贯。
+* 🚀 **2026-03-22**: 引入 **ASR 语音粗剪技能**，支持自动删除填充词、口癖和重复句子，实现时间戳对齐分割，简化语音编辑工作流程。
+* 🔥 **2026-03-12**: 集成 **OpenClaw**，新增两个 OpenClaw 技能——`editos-install` 和 `editos-use`——分别覆盖初始安装/首次运行工作流程和实际使用工作流程。同时添加了 **Claude Code** 的技能使用说明，使 **Claude Code** 能够更便捷地安装和调用项目。
 
-## 🏗️ 架构
+## ✨ 演示
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/EditOSTeam/fireredteam.github.io/main/demos/firered_editos/pics/structure.jpg" alt="editos 架构" width="800">
-</p>
+| 种草风格 | 幽默风格 | 好物推荐 | 艺术风格 |
+|:--------:|:--------:|:--------:|:--------:|
+| <video src="https://github.com/user-attachments/assets/28043813-1fda-4077-80d4-c6f540d7c7cb" width="220" /> | <video src="https://github.com/user-attachments/assets/a1e33da2-a799-4398-a1bb-b25bb5143d7c" width="220" /> | <video src="https://github.com/user-attachments/assets/444fd0fb-8824-4c25-b449-9309b0fcfd85" width="220" /> | <video src="https://github.com/user-attachments/assets/2e69fa0d-b693-4d4f-b4d2-45146254f9e8" width="220" /> |
 
-## ✨ 演示案例
-
-<table align="center">
-  <tr>
-    <td align="center"><b>种草视频</b></td>
-    <td align="center"><b>幽默有趣</b></td>
-    <td align="center"><b>好物分享</b></td>
-    <td align="center"><b>文艺风格</b></td>
-  </tr>
-  <tr>
-    <td align="center"><video src="https://github.com/user-attachments/assets/28043813-1fda-4077-80d4-c6f540d7c7cb" controls width="220"></video></td>
-    <td align="center"><video src="https://github.com/user-attachments/assets/a1e33da2-a799-4398-a1bb-b25bb5143d7c" controls width="220"></video></td>
-    <td align="center"><video src="https://github.com/user-attachments/assets/444fd0fb-8824-4c25-b449-9309b0fcfd85" controls width="220"></video></td>
-    <td align="center"><video src="https://github.com/user-attachments/assets/2e69fa0d-b693-4d4f-b4d2-45146254f9e8" controls width="220"></video></td>
-  </tr>
-  </tr>
-
-  <tr>
-    <td align="center"><b>开箱视频</b></td>
-    <td align="center"><b>宠物说话</b></td>
-    <td align="center"><b>旅行Vlog</b></td>
-    <td align="center"><b>年终总结</b></td>
-  </tr>
-  <tr>
-    <td align="center"><video src="https://github.com/user-attachments/assets/ff1d669b-1d27-4cf8-b0be-1b141c717466" controls width="220"></video></td>
-    <td align="center"><video src="https://github.com/user-attachments/assets/063608bb-7fbd-4841-a08f-032ae459499f" controls width="220"></video></td>
-    <td align="center"><video src="https://github.com/user-attachments/assets/bc441dfa-e995-4575-8401-ecefa269e57b" controls width="220"></video></td>
-    <td align="center"><video src="https://github.com/user-attachments/assets/533ef5c3-bb76-4416-bff7-825e88b00b7d" controls width="220"></video></td>
-  </tr>
-  </tr>
-</table>
-
-> <sub>
-> 🎨 <b>效果说明：</b>受限于开源素材的版权协议，第一行默认演示中的元素（字体/音乐）仅为基础效果。<b>强烈建议</b>接入<a href="https://github.com/EditOSTeam/FireRed-EditOS/blob/main/docs/source/zh/guide.md#2-%E9%AB%98%E7%BA%A7%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">自建元素库教程</a>，解锁商用级字体、音乐、特效等，可实现显著优于默认效果的视频质量。<br>
-> ⚠️ <b>画质注：</b>受限于README展示空间，演示视频经过极限压缩。实际运行默认保持原分辨率输出，支持自定义尺寸。<br>
-> Demo中：<b>第一行</b>为默认开源素材效果（受限模式），<b>第二行</b>为小红书App「AI剪辑」元素库效果。👉 <a href="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/media/others/ai_cut_guide.png">点击查看体验教程</a><br>
-> ⚖️ <b>免责声明：</b>演示中包含的用户自摄素材及品牌标识仅作技术能力展示，版权归原作者所有。如有侵权请联系删除。
-> </sub>
+| 开箱 | 萌宠说话 | 旅行 vlog | 年度回顾 |
+|:----:|:--------:|:---------:|:--------:|
+| <video src="https://github.com/user-attachments/assets/ff1d669b-1d27-4cf8-b0be-1b141c717466" width="220" /> | <video src="https://github.com/user-attachments/assets/063608bb-7fbd-4841-a08f-032ae459499f" width="220" /> | <video src="https://github.com/user-attachments/assets/bc441dfa-e995-4575-8401-ecefa269e57b" width="220" /> | <video src="https://github.com/user-attachments/assets/533ef5c3-bb76-4416-bff7-825e88b00b7d" width="220" /> |
 
 ## 🤖 通过 Agent 使用
 
-FireRed-EditOS 支持通过 Agent Skills 使用。
-我们提供了两个 Skills：
+EditOS 支持通过 Agent Skills 使用。
+我们提供两个技能：
 
-- `editos-install`：用于安装、配置与首跑验证。
-- `editos-use`：用于启动服务并执行实际视频剪辑流程。
-
-### OpenClaw
-
-直接告诉OpenClaw：“我想体验 editos，帮我安装相关 Skills”，即可自动触发安装。
-如果安装遇到问题，使用下面的命令手动安装：
-
-```bash
-openclaw skills install editos-install
-openclaw skills install editos-use
-```
-
-如果你的 OpenClaw 版本不支持 `openclaw skills install`，或者安装仍然失败，可以改用 ClawHub：
-```bash
-npx clawhub install editos-install
-npx clawhub install editos-use
-```
-
-安装后，只需要将素材发给 OpenClaw，它就可以帮你完成从安装 FireRed-EditOS 到成片的整个过程。
+* `editos-install`：用于安装、配置和首次运行验证。
+* `editos-use`：用于启动服务和运行实际视频编辑工作流程。
 
 ### Claude Code
 
-本仓库内置了 Claude Code Skills。  
-如果你在**仓库根目录**启动 Claude Code，可直接使用仓库中的项目级 Skills，Claude Code 可以帮你完成 FireRed-EditOS 的安装与使用。
+本仓库包含内置的 Claude Code Skills。
+如果您从**本仓库的根目录**启动 Claude Code，可以直接使用仓库中包含的项目级 Skills。Claude Code 可以帮助您安装和使用 EditOS。
 
 ```bash
 /editos-install
 /editos-use
 ```
 
-如果你想把这两个 Skills 安装到你自己的 Claude Code 全局配置中，可执行：
+如果您想将这些技能安装到自己的全局 Claude Code 配置中，请运行：
 
 ```bash
 mkdir -p ~/.claude/skills
@@ -150,209 +83,110 @@ cp -R .claude/skills/editos-install ~/.claude/skills/
 cp -R .claude/skills/editos-use ~/.claude/skills/
 ```
 
-### 其他兼容 Agent（实验性）
-
-这些 Skills 基于开放的 Agent Skills 格式，理论上也可安装到其他兼容的 agent 中。
-例如，可通过 Skills CLI 安装到 Codex：
-
-```bash
-npx skills add EditOSTeam/FireRed-EditOS --skill editos-install --agent codex
-npx skills add EditOSTeam/FireRed-EditOS --skill editos-use --agent codex
-```
-
-或者使用下面的命令，选择 --global 参数将此技能安装到用户级目录，跨项目可用：
-```bash
-npx skills add EditOSTeam/FireRed-EditOS --skill editos-install --global
-npx skills add EditOSTeam/FireRed-EditOS --skill editos-use --global
-```
-
 ## 📦 安装
 
 ### 1. 克隆仓库
 ```bash
-# 如果没有安装git，参考官方网站进行安装：https://git-scm.com/install/
-# 或手动打包下载，并解压
-git clone https://github.com/EditOSTeam/FireRed-EditOS.git
-cd FireRed-EditOS
+git clone https://github.com/robloxsagax-web/EditOS.git
+cd EditOS
 ```
 
 ### 2. 创建虚拟环境
 
-按照官方指南安装 Conda（推荐Miniforge，安装过程中建议勾选上自动配置环境变量）：https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
-
-```
-# 要求python>=3.11
+```bash
+# 推荐 python>=3.11
 conda create -n editos python=3.11
 conda activate editos
 ```
 
-### 3. 资源下载与依赖安装
-#### 3.1 一键安装（仅支持Linux和MacOS）
+### 3. 资源下载与安装
+
+```bash
+chmod +x download.sh
+./download.sh
+pip install -r requirements.txt
 ```
-sh build_env.sh
-```
-
-#### 3.2 手动安装
-##### A. MacOS 或 Linux
-  - Step 1: 安装 wget（如果尚未安装）
-    
-    ```
-    # MacOS: 如果你还没有安装 Homebrew，请先安装：https://brew.sh/
-    brew install wget
-    
-    # Ubuntu/Debian
-    sudo apt-get install wget
-    
-    # CentOS
-    sudo yum install wget
-    ```
-
-  - Step 2: 下载资源
-  
-    ```bash
-    chmod +x download.sh
-    ./download.sh
-    ```
-  
-  - Step 3: 安装依赖
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-    如果你计划使用 `editos.local_asr`，请确认当前环境已安装 `torchaudio`。
-
-###### B. Windows
-  - Step 1: 准备目录：在项目根目录下新建目录 `resource`。
-
-  - Step 2: 下载并解压：
-
-    *   [下载模型 (models.zip)](https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/models.zip) -> 解压至 `.editos` 目录。
-  
-    *   [下载资源 (resource.zip)](https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/resource.zip) -> 解压至 `resource` 目录。
-  - Step 3:  **安装依赖**：
-    ```bash
-    pip install -r requirements.txt
-    ```
-    如果你计划使用 `editos.local_asr`，请确认当前环境已安装 `torchaudio`。
-
 
 ## 🚀 快速开始
-注意：在开始之前，您需要先在 config.toml 中配置 API-Key。详细信息请参阅文档 [API-Key 配置](docs/source/zh/api-key.md)
 
-### 1. 启动 MCP 服务器
+注意：启动前，您需要在 `config.toml` 中配置 API-Key。详情请参阅文档 [API-Key 配置](docs/source/zh/api-key.md)。
 
-#### MacOS or Linux
-  ```bash
-  PYTHONPATH=src python -m edit_os.mcp.server
-  ```
+### 启动 MCP 服务器
 
-#### Windows
-  ```
-  $env:PYTHONPATH="src"; python -m edit_os.mcp.server
-  ```
+```bash
+PYTHONPATH=src python -m edit_os.mcp.server
+```
 
+### 启动对话界面
 
-### 2. 启动对话界面
-
-- 方式 1：命令行界面
+- **方法一：命令行界面**
 
   ```bash
   python cli.py
   ```
 
-- 方式 2：Web 界面
+- **方法二：Web 界面**
 
   ```bash
-  uvicorn agent_fastapi:app --host 127.0.0.1 --port 7860
+  uvicorn agent_fastapi:app --host 127.0.0.1 --port 8005
   ```
 
-## 🐳 Docker 部署
-
-如果未安装 Docker，请先安装 https://www.docker.com/products/docker-desktop/
-
-### 拉取镜像
-```
-# 从 Docker Hub 官方仓库拉取镜像
-# 推荐海外用户使用
-docker pull editos/editos:v1.0.1
-
-# 从阿里云容器镜像服务拉取镜像
-# 推荐国内用户使用（速度更快，更稳定）
-docker pull crpi-6knxem4w8ggpdnsn.cn-shanghai.personal.cr.aliyuncs.com/editos/editos:v1.0.1
-```
-
-### 启动镜像
-```
-docker run \
-  -v $(pwd)/config.toml:/app/config.toml \
-  -v $(pwd)/outputs:/app/outputs \
-  -v $(pwd)/run.sh:/app/run.sh \
-  -p 7860:7860 \
-  editos/editos:v1.0.1
-```
-启动后访问Web界面 http://0.0.0.0:7860
-
 ## 📁 项目结构
-```
-FireRed-EditOS/
-├── 🎯 src/edit_os/           核心应用
-│   ├── mcp/                         🔌 模型上下文协议
-│   ├── nodes/                       🎬 视频处理节点
-│   ├── skills/                      🛠️ Agent 技能库
-│   ├── storage/                     💾 Agent 记忆系统
-│   ├── utils/                       🧰 工具函数
-│   ├── agent.py                     🤖 Agent 构建
-│   └── config.py                    ⚙️ 配置管理
-├── 📚 docs/                         文档
-├── 🐳 Dockerfile                    Docker 配置
-├── 💬 prompts/                      LLM 提示词模板
-├── 🎨 resource/                     静态资源
-│   ├── bgms/                        背景音乐库
-│   ├── fonts/                       字体文件
-│   ├── script_templates/            视频脚本模板
-│   └── unicode_emojis.json          Emoji 列表
-├── 🔧 scripts/                      工具脚本
-├── 🌐 web/                          Web 界面
-├── 🚀 agent_fastapi.py              FastAPI 服务器
-├── 🖥️ cli.py                        命令行界面
-├── ⚙️ config.toml                   主配置文件
-├── 🚀 build_env.sh                  环境构建脚本
-├── 📥 download.sh                   资源下载脚本
-├── 📦 requirements.txt              运行时依赖
-└── ▶️ run.sh                        启动脚本
 
+```
+EditOS/
+├── src/edit_os/               核心应用
+│   ├── mcp/                   Model Context Protocol
+│   ├── nodes/                 视频处理节点
+│   ├── skills/                Agent 技能库
+│   ├── storage/               Agent 记忆
+│   ├── utils/                 辅助工具
+│   ├── agent.py               构建 Agent
+│   └── config.py              配置管理
+├── docs/                      文档
+├── Dockerfile                 Docker 配置
+├── prompts/                   LLM 提示词模板
+├── resource/                  静态资源
+│   ├── bgms/                  背景音乐库
+│   ├── fonts/                 字体文件
+│   ├── script_templates/      视频脚本模板
+│   └── unicode_emojis.json   表情列表
+├── scripts/                   实用脚本
+├── web/                       Web 界面
+├── agent_fastapi.py           FastAPI 服务器
+├── cli.py                     命令行界面
+├── config.toml                主配置文件
+├── build_env.sh               环境构建脚本
+├── download.sh               资源下载器
+├── requirements.txt           运行时依赖
+└── run.sh                     启动脚本
 ```
 
 ## 📚 文档
 
 ### 📖 教程索引
 
-- [API申请与配置](docs/source/zh/api-key.md) - 如何申请和配置 API 密钥
+- [API-Key 配置](docs/source/zh/api-key.md) - 如何配置和管理 API 密钥
 - [使用教程](docs/source/zh/guide.md) - 常见用例和基本操作
 - [常见问题](docs/source/zh/faq.md) - 常见问题解答
 
 ## TODO
 
-- [ ] 添加口播类型视频剪辑功能
-- [ ] 添加音色克隆功能
-- [ ] 添加更多的转场/滤镜/特效功能
-- [ ] 添加图像/视频生成和编辑能力
-- [ ] 支持GPU渲染和高光裁切
+- [ ] 添加**配音类视频编辑**功能
+- [ ] 添加**声音克隆**支持
+- [ ] 添加更多**转场/滤镜/特效**效果功能
+- [ ] 添加**图像/视频生成和编辑**能力
+- [ ] **GPU 加速**渲染和高光选择
 
 ## 致谢
 
 本项目基于以下优秀的开源项目构建：
 
-
 ### 核心依赖
 - [MoviePy](https://github.com/Zulko/moviepy) - 视频编辑库
 - [FFmpeg](https://ffmpeg.org/) - 多媒体框架
-- [LangChain](https://www.langchain.com/) - 提供预构建Agent的框架
+- [LangChain](https://www.langchain.com/) - 提供预构建 Agent 的框架
 
-## 📄 License
+## 📄 许可证
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
-
-## ⭐ Star History
-
-<div align="center"> <p> <img width="800" src="https://api.star-history.com/svg?repos=EditOSTeam/FireRed-EditOS&type=Date" alt="Star-history"> </p> </div>
+本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件。

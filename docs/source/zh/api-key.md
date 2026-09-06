@@ -1,153 +1,248 @@
-# API-Key 配置指南
+# API 密钥配置
 
-## 一、大语言模型 (LLM)
+EditOS 支持多种 AI 提供商。在 `config.toml` 中配置您偏好的服务。
 
-### 以 DeepSeek 为例
+## 大语言模型 (LLM)
 
-**官方文档**：https://api-docs.deepseek.com/zh-cn/
+用于脚本生成和对话。支持任何 OpenAI 兼容 API。
 
-提示: 对于中国以外用户建议使用 Gemini、Claude、ChatGPT 等主流大语言模型以获得最佳体验。
+### OpenRouter（推荐）
 
-### 配置步骤
+统一访问 100+ 模型，包括 GPT-4o、Claude、Gemini、Llama 等。
 
-1. **申请 API Key**
-   - 访问平台：https://platform.deepseek.com/usage
-   - 登录后申请 API Key
-   - ⚠️ **重要**：妥善保存获取的 API Key
+```toml
+[llm]
+provider = "openrouter"
+model = "openai/gpt-4o-mini-2024-07-18"
+base_url = "https://openrouter.ai/api/v1"
+api_key = "sk-or-v1-xxxxx"
+```
 
-2. **配置参数**
-   - **模型名称**：`deepseek-chat`
-   - **Base URL**：`https://api.deepseek.com/v1`
-   - **API Key**：填写上一步获取的 Key
+**获取密钥：** https://openrouter.ai/keys
 
-3. **API填写**
-   - **Web使用**: 
-      - 在LLM模型下拉框中选择使用自定义模型，模型按照配置参数进行填写
-      - 或是在`config.toml`中 找到`[llm]`并配置model、base_url、api_key。Web页面下拉框会出现你填写的模型。
-   - **CLI**：
-      - 如果你偏好 CLI 入口，需要在`config.toml`中找到`[llm]`并配置model、base_url、api_key。
+### DeepSeek
 
-## 二、多模态大模型 (VLM)
+```toml
+[llm]
+provider = "openai"
+model = "deepseek-chat"
+base_url = "https://api.deepseek.com/v1"
+api_key = "sk-xxxxx"
+```
 
-### 2.1 使用GLM-4.6V
+**获取密钥：** https://platform.deepseek.com/usage
 
-**API Key 管理**：https://open.bigmodel.cn/usercenter/proj-mgmt/apikeys
+### OpenAI
 
-### 配置参数
+```toml
+[llm]
+provider = "openai"
+model = "gpt-4o-mini"
+base_url = "https://api.openai.com/v1"
+api_key = "sk-xxxxx"
+```
 
-- **模型名称**：`glm-4.6v`
-- **Base URL**：`https://open.bigmodel.cn/api/paas/v4/`
+**获取密钥：** https://platform.openai.com/api-keys
 
-### 2.2 使用Qwen3-VL
+### Gemini (Google AI)
 
-**API Key管理**：进入阿里云百炼平台申请API Key https://bailian.console.aliyun.com/cn-beijing/?apiKey=1&tab=globalset#/efm/api_key
+```toml
+[llm]
+provider = "openai"
+model = "gemini-2.0-flash"
+base_url = "https://generativelanguage.googleapis.com/v1beta"
+api_key = "AIzaSyxxxxx"
+```
 
- - **模型名称**：`qwen3-vl-8b-instruct`
- - **Base URL**：`https://dashscope.aliyuncs.com/compatible-mode/v1`
+**获取密钥：** https://aistudio.google.com/app/apikey
 
- - **参数填写**：
-    - **Web使用**: 
-      - 在VLM模型下拉框中选择使用自定义模型，模型按照配置参数进行填写。
-      - 或是在`config.toml`中 找到`[vlm]`并配置model、base_url、api_key。Web页面下拉框会出现你填写的模型。
-   - **CLI**：
-      - 如果你偏好 CLI 入口，需要在`config.toml`中找到`[vlm]`并配置model、base_url、api_key。
+### Anthropic (Claude)
 
+```toml
+[llm]
+provider = "anthropic"
+model = "claude-3-5-sonnet-20240620"
+base_url = "https://api.anthropic.com/v1"
+api_key = "sk-ant-xxxxx"
+```
 
-### 2.3 使用Qwen3-Omni
+**获取密钥：** https://console.anthropic.com/settings/keys
 
-Qwen3-Omni同样可以在阿里云百炼平台进行申请，具体参数如下，可用于omni_bgm_label.py的音频自动标注
-- **模型名称**：`qwen3-omni-flash-2025-12-01`
-- **Base URL**：`https://dashscope.aliyuncs.com/compatible-mode/v1`
+### Groq
 
-详细文档参考：https://bailian.console.aliyun.com/cn-beijing/?tab=doc#/doc
+```toml
+[llm]
+provider = "openai"
+model = "llama-3.1-70b-versatile"
+base_url = "https://api.groq.com/openai/v1"
+api_key = "gsk_xxxxx"
+```
 
-阿里云模型列表：https://help.aliyun.com/zh/model-studio/models
+**获取密钥：** https://console.groq.com/keys
 
-计费看板：https://billing-cost.console.aliyun.com/home
+### Together AI
 
-## 三、Pexels 图像和视频下载API密钥配置
+```toml
+[llm]
+provider = "openai"
+model = "meta-llama/Llama-3.1-405B-Instruct-Turbo"
+base_url = "https://api.together.xyz/v1"
+api_key = "togilypxxxxx"
+```
 
-1. 打开Pexels网站，注册账号，申请API https://www.pexels.com/zh-cn/api/key/ 
-<div align="center">
-  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/resource/pexels_api.png" alt="pexels下载图像和视频API申请" width="70%">
-  <p><em>图1: Pexels API申请页面</em></p>
-</div>
+**获取密钥：** https://api.together.xyz/settings/api-keys
 
-2. 网页使用：找到Pexels配置，选择使用自定义key，将API key填入表单中。
-<div align="center">
-  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/resource/use_pexels_api_zh.png" alt="pexels API填写" width="70%">
-  <p><em>图2: Pexels API 使用</em></p>
-</div>
+---
 
-3. 本地部署的项目：我们将API填写在config.toml中的pexels_api_key字段中。作为项目的默认配置
+## 视觉模型 (VLM)
 
-## 四、TTS (文本转语音) 配置
+用于图像理解和片段分析。支持多模态模型。
 
-### 方案一：MiniMax（推荐使用）
+### Gemini Vision（推荐）
 
-- **服务地址**：https://platform.minimaxi.com/docs/api-reference/speech-t2a-http
-- **API Key Base url**：https://api.minimax.chat/v1/t2a_v2
+```toml
+[vlm]
+provider = "openai"
+model = "gemini-2.0-flash"
+base_url = "https://generativelanguage.googleapis.com/v1beta"
+api_key = "AIzaSyxxxxx"
+```
 
-**配置步骤**：
-1. 创建 API Key
-2. 访问：https://platform.minimax.io/user-center/basic-information/interface-key
-3. 获取并保存 API Key
+### OpenRouter 视觉模型
 
-### 方案二：bytedance（推荐使用）
-1. 步骤1：开通音视频字幕生成服务
-   使用旧版页面，找到音视频字幕生成服务：
-   - 访问：https://console.volcengine.com/speech/service/9?AppID=8782592131
+```toml
+[vlm]
+provider = "openrouter"
+model = "google/gemini-2.0-flash"
+base_url = "https://openrouter.ai/api/v1"
+api_key = "sk-or-v1-xxxxx"
+```
 
-2. 步骤2：获取认证信息
-   查看账号基本信息页面：
-   - 访问：https://console.volcengine.com/user/basics/
+### Qwen VL（阿里云）
 
-<div align="center">
-  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/resource/use_bytedance_tts_zh.png" alt="Bytedance TTS API填写" width="70%">
-  <p><em>图3: Bytedance TTS API 使用</em></p>
-</div>
+```toml
+[vlm]
+provider = "openai"
+model = "qwen-vl-plus"
+base_url = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+api_key = "sk-xxxxx"
+```
 
-   需要获取以下信息：
-   - **UID**: 主账号信息中的 ID
-   - **APP ID**: 服务接口认证信息中的 APP ID
-   - **Access Token**: 服务接口认证信息中的 Access Token
-   
-   本地部署使用修改config.toml中
-   ```
-   [generate_voiceover.providers.bytedance]
-   uid = ""
-   appid = ""
-   access_token = ""
-   ```
-   或直接在前端网页侧边栏填写。
+**获取密钥：** https://bailian.console.aliyun.com/
 
-### 方案三：302.ai （备选方案）
+### GLM-4V（智谱 AI）
 
-- **服务地址**：https://302.ai/product/detail/302ai-mmaudio-text-to-speech
-- **API Key Base url**：https://api.302.ai
+```toml
+[vlm]
+provider = "openai"
+model = "glm-4v-plus"
+base_url = "https://open.bigmodel.cn/api/paas/v4"
+api_key = "xxxxx"
+```
 
-详细文档请参考：https://www.volcengine.com/docs/6561/80909?lang=zh
+**获取密钥：** https://open.bigmodel.cn/usercenter/proj-mgmt/apikeys
 
-## 五： AI 转场配置
+---
 
-**使用前说明**：AI 转场会额外触发模型调用，转场是在相邻片段之间逐段生成，片段越多、切分越细，调用次数通常越高，因此资源消耗通常**显著高于**常规文案或配音流程。
+## 语音合成 (TTS)
 
-**效果说明**：当前转场描述由视觉模型基于片段首尾帧自动生成，片段衔接顺序由语言模型综合判断，因此最终效果受首尾帧内容、提示词、模型版本和服务波动影响，存在一定随机性，不保证每次都完全符合预期。
+用于配音生成。
 
-**使用建议**：建议先使用少量片段试跑，确认效果与成本后再批量生成，并提前关注**账户余额**与**计费规则**。
+### ElevenLabs（推荐）
 
-### 方案一：Minimax 海螺
-1. Minimax 的 LLM / TTS 服务的API key 通常同样适用于海螺视频生成服务。如果你已申请过，可直接使用；如果你还没有申请过，可以前往<a href="https://platform.minimaxi.com/user-center/basic-information" target="_blank">用户中心</a>申请。
+```toml
+[generate_voiceover]
+default_provider = "elevenlabs"
 
-2. 模型名可选择 `MiniMax-Hailuo-02`，或<a href="https://platform.minimaxi.com/docs/api-reference/video-generation-fl2v" target="_blank">查阅文档</a>获取最新支持的模型名。
+[generate_voiceover.providers.elevenlabs]
+api_key = "sk_xxxxx"
+voice_id = "EXAVITQu4vr4xnSDxMaL"  # Sarah（免费层）
+```
 
-### 方案二： 阿里通义万相 Wan
-1. 阿里百炼大模型的 LLM 服务的API key 通常同样适用于 Wan 视频生成服务。如果你已申请过，可直接使用；如果你还没有申请过，可以前往<a href="https://bailian.console.aliyun.com/cn-beijing?tab=globalset#/efm/api_key" target="_blank">百炼控制台</a>申请。
+**获取密钥：** https://elevenlabs.io/api
+**免费音色：** https://elevenlabs.io/voice-library
 
-2. 模型名推荐选择 wan2.2-kf2v-flash，或<a href="https://help.aliyun.com/zh/model-studio/image-to-video-first-and-last-frames-guide" target="_blank">查阅文档</a>获取最新支持的模型名。
+### MiniMax
 
-## 注意事项
+```toml
+[generate_voiceover]
+default_provider = "minimax"
 
-- 所有 API Key 均需妥善保管，避免泄露
-- 使用前请确认账户余额充足
-- 建议定期检查 API 调用量和费用
+[generate_voiceover.providers.minimax]
+api_key = "xxxxx"
+group_id = "xxxxx"
+```
+
+**获取密钥：** https://platform.minimax.io/
+
+---
+
+## 素材搜索
+
+可选 - 用于搜索免费图片和视频素材。
+
+### Pexels
+
+```toml
+[search_media]
+default_provider = "pexels"
+
+[search_media.providers.pexels]
+api_key = "xxxxx"
+```
+
+**获取密钥：** https://www.pexels.com/api/
+
+### Pixabay
+
+```toml
+[search_media]
+default_provider = "pixabay"
+
+[search_media.providers.pixabay]
+api_key = "xxxxx"
+```
+
+**获取密钥：** https://pixabay.com/api/
+
+---
+
+## 环境变量（ModelScope）
+
+在 ModelScope 部署时，使用环境变量：
+
+| 变量 | 描述 |
+|----------|-------------|
+| `OPENSTORYLINE_LLM_API_KEY` | LLM API 密钥 |
+| `OPENSTORYLINE_VLM_API_KEY` | VLM API 密钥 |
+| `OPENSTORYLINE_PEXELS_API_KEY` | Pexels API 密钥 |
+| `OPENSTORYLINE_GENERATE_VOICEOVER__PROVIDERS__ELEVENLABS__API_KEY` | ElevenLabs 密钥 |
+
+---
+
+## 最小配置示例
+
+```toml
+[llm]
+provider = "openrouter"
+model = "openai/gpt-4o-mini-2024-07-18"
+base_url = "https://openrouter.ai/api/v1"
+api_key = "sk-or-v1-your-key"
+
+[vlm]
+provider = "openrouter"
+model = "google/gemini-2.0-flash"
+base_url = "https://openrouter.ai/api/v1"
+api_key = "sk-or-v1-your-key"
+
+[generate_voiceover]
+default_provider = "elevenlabs"
+[generate_voiceover.providers.elevenlabs]
+api_key = "sk-your-key"
+voice_id = "EXAVITQu4vr4xnSDxMaL"
+
+[search_media]
+default_provider = "pexels"
+[search_media.providers.pexels]
+api_key = "your-pexels-key"
+```

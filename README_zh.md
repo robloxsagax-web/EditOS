@@ -1,192 +1,236 @@
 # EditOS
 
-<div align="center">
-  <a href="#gh-light-mode-only">
-    <img src="web/static/brand_white.svg" alt="EditOS" width="70%"/>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="web/static/brand_black.svg">
+    <img src="web/static/brand_white.svg" alt="EditOS" width="400">
+  </picture>
+</p>
+
+<p align="center">
+  <a href="./README_zh.md">🇨🇳 简体中文</a> |
+  <a href="./README.md">🌏 English</a>
+</p>
+
+<p align="center">
+  <a href="https://www.modelscope.ai/studios/Muhammad_Mujtaba/EditOS/summary">
+    <img src="https://img.shields.io/badge/🌐_ModelScope-演示-4B6CFF?style=for-the-badge&logo=modelscope&logoColor=white" alt="ModelScope 演示"/>
   </a>
-  <a href="#gh-dark-mode-only">
-    <img src="web/static/brand_black.svg" alt="EditOS" width="70%"/>
+  <a href="https://github.com/robloxsagax-web/EditOS">
+    <img src="https://img.shields.io/badge/📦_GitHub-EditOS-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
   </a>
-  
-  <p>
-    <a href="./README_zh.md">🇨🇳 简体中文</a> |
-    <a href="./README.md">🌏 English</a>
-  </p>
-  <p>
-    <a href="https://www.modelscope.cn/studios/Muhammad_Mujtaba/EditOS" target="_blank">
-        <img alt="ModelScope Demo" src="https://img.shields.io/badge/ModelScope-Demo-4B6CFF?style=flat&logo=modelscope&logoColor=white" style="display: inline-block;"/></a>
-    <a href="https://github.com/robloxsagax-web/EditOS" target="_blank"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-EditOS-181717?style=flat&logo=github&logoColor=white" style="display: inline-block;"/></a>
-    <img src="https://img.shields.io/badge/python-≥3.11-blue" alt="Python">
-    <img src="https://img.shields.io/badge/license-MIT-blue" alt="License">
-  </p>
-</div>
+  <img src="https://img.shields.io/badge/python-≥3.11-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="License">
+</p>
 
-<div align="center">
+---
 
-[🌐 ModelScope 演示](https://www.modelscope.ai/studios/Muhammad_Mujtaba/EditOS/summary) • [📦 GitHub](https://github.com/robloxsagax-web/EditOS)
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/9116767e-bcd9-417a-93d8-2db4d3d5df8e" width="80%" poster=""></video>
+</p>
 
-</div>
+---
 
-<div align="center">
-  <video src="https://github.com/user-attachments/assets/9116767e-bcd9-417a-93d8-2db4d3d5df8e" width="70%" poster=""> </video>
-</div>
+**EditOS** 将复杂的视频创作转化为自然、直观的对话体验。由 AI 代理驱动，它处理从脚本生成到最终渲染的所有内容——让专业视频编辑对每个人都变得简单易用。
 
-**EditOS** 将复杂的视频创作转化为自然、直观的对话体验。EditOS 在设计和开发时兼顾了易用性和企业级可靠性，让视频创作对初学者和创意爱好者都变得简单友好。
+## ✨ 核心功能
 
-## ✨ 核心特性
-- 🌐 **智能媒体搜索与整理**：自动搜索并下载符合您需求的图片和视频片段。基于主题媒体进行片段分割和内容理解。
-- ✍️ **智能脚本生成**：结合用户主题、视觉理解和情感识别，自动构建故事线和情境化旁白。支持 Few-shot 风格迁移，允许用户通过参考文本定义特定文案风格（如产品评测、随性 vlog），实现精确的语调、节奏和句式复制。
-- 🎵 **智能音乐、配音与字体推荐**：支持个人播放列表导入，根据内容和情绪自动推荐背景音乐，智能节拍同步。只需描述您想要的风格——例如"克制"、"情感化"或"纪录片风格"——系统就会匹配合适的配音和字体，确保统一的审美风格。
-- 💬 **对话式精修**：快速剪切、替换或重新排序片段。编辑脚本和微调视觉细节——包括颜色、字体、描边和位置。所有编辑都通过自然语言提示完成，立即生效。
-- ⚡**编辑技能归档**：将完整的编辑工作流程保存为自定义技能。只需更换媒体并应用相应技能，即可立即复制风格，实现高效批量创作。
+| 功能 | 描述 |
+|---------|-------------|
+| 🌐 **智能素材搜索** | 自动搜索并下载相关的在线图片和视频片段 |
+| ✍️ **AI 脚本生成** | 根据您的主题创建故事线和旁白，支持自定义风格 |
+| 🎵 **智能音频** | 自动推荐背景音乐，使用 TTS 生成配音 |
+| 🎬 **AI 转场** | 在片段之间创建平滑的 AI 驱动转场效果 |
+| 💬 **对话式编辑** | 通过自然语言进行编辑——无需技术技能 |
+| ⚡ **技能归档** | 保存并重用您的编辑工作流程用于批量处理 |
 
-## 最新动态
+## 🚀 支持的 AI 提供商
 
-* 🎬 **2026-08-05**: v1.0.0 发布，具备全面的视频编辑能力、AI 转场和对话式界面。
-* 🎬 **2026-04-02**: 新增 **AI 转场生成**功能，基于前一个片段的结尾帧、后一个片段的开头帧以及自然语言描述，自动创建过渡镜头，使场景转换更流畅、叙事更连贯。
-* 🚀 **2026-03-22**: 引入 **ASR 语音粗剪技能**，支持自动删除填充词、口癖和重复句子，实现时间戳对齐分割，简化语音编辑工作流程。
-* 🔥 **2026-03-12**: 集成 **OpenClaw**，新增两个 OpenClaw 技能——`editos-install` 和 `editos-use`——分别覆盖初始安装/首次运行工作流程和实际使用工作流程。同时添加了 **Claude Code** 的技能使用说明，使 **Claude Code** 能够更便捷地安装和调用项目。
+EditOS 支持多种 AI 提供商以实现最大灵活性：
+
+### 大语言模型 (LLM)
+
+| 提供商 | 模型 | Base URL |
+|----------|-------|----------|
+| **OpenRouter** | 任何 OpenRouter 模型 (gpt-4o-mini, claude-3-haiku 等) | `https://openrouter.ai/api/v1` |
+| **OpenAI** | GPT-4o, GPT-4o-mini, GPT-4 | `https://api.openai.com/v1` |
+| **DeepSeek** | deepseek-chat, deepseek-coder | `https://api.deepseek.com/v1` |
+| **Gemini** | gemini-2.0-flash, gemini-1.5-pro | `https://generativelanguage.googleapis.com/v1beta` |
+| **Anthropic** | claude-3-5-sonnet, claude-3-opus | `https://api.anthropic.com/v1` |
+| **Groq** | llama-3.1-70b, mixtral-8x7b | `https://api.groq.com/openai/v1` |
+| **Together AI** | llama-3.1-405b, qwen-2.5 | `https://api.together.xyz/v1` |
+| **Azure OpenAI** | GPT-4o, GPT-4 | 您的 Azure 端点 |
+
+### 视觉模型 (VLM)
+
+| 提供商 | 模型 | 描述 |
+|----------|-------|-------------|
+| **Gemini** | `gemini-2.0-flash`, `gemini-1.5-pro` | Google 多模态模型 |
+| **Qwen VL** | `qwen2-vl-72b`, `qwen2.5-vl-72b` | 阿里云视觉模型 |
+| **GLM-4V** | `glm-4v-plus` | 智谱 AI 视觉模型 |
+| **DeepSeek VL** | `deepseek-vl2` | DeepSeek 视觉语言模型 |
+| **Llama Vision** | `llama-3.2-90b-vision` | Meta 视觉模型 |
+
+### 语音合成 (TTS)
+
+| 提供商 | 描述 |
+|----------|-------------|
+| **ElevenLabs** | 高质量神经语音合成 |
+| **MiniMax** | 快速且经济实惠的 TTS |
+| **Fish Audio** | 开源 TTS 选项 |
+
+### 素材搜索
+
+| 提供商 | 描述 |
+|----------|-------------|
+| **Pexels** | 免费图片和视频素材 |
+| **Pixabay** | 免费素材资源 |
+
+---
 
 ## ✨ 演示
 
 | 种草风格 | 幽默风格 | 好物推荐 | 艺术风格 |
-|:--------:|:--------:|:--------:|:--------:|
+|:--------------:|:--------------:|:-------------:|:--------------:|
 | <video src="https://github.com/user-attachments/assets/28043813-1fda-4077-80d4-c6f540d7c7cb" width="220" /> | <video src="https://github.com/user-attachments/assets/a1e33da2-a799-4398-a1bb-b25bb5143d7c" width="220" /> | <video src="https://github.com/user-attachments/assets/444fd0fb-8824-4c25-b449-9309b0fcfd85" width="220" /> | <video src="https://github.com/user-attachments/assets/2e69fa0d-b693-4d4f-b4d2-45146254f9e8" width="220" /> |
 
 | 开箱 | 萌宠说话 | 旅行 vlog | 年度回顾 |
-|:----:|:--------:|:---------:|:--------:|
+|:--------:|:-----------:|:-----------:|:--------------:|
 | <video src="https://github.com/user-attachments/assets/ff1d669b-1d27-4cf8-b0be-1b141c717466" width="220" /> | <video src="https://github.com/user-attachments/assets/063608bb-7fbd-4841-a08f-032ae459499f" width="220" /> | <video src="https://github.com/user-attachments/assets/bc441dfa-e995-4575-8401-ecefa269e57b" width="220" /> | <video src="https://github.com/user-attachments/assets/533ef5c3-bb76-4416-bff7-825e88b00b7d" width="220" /> |
 
-## 🤖 通过 Agent 使用
-
-EditOS 支持通过 Agent Skills 使用。
-我们提供两个技能：
-
-* `editos-install`：用于安装、配置和首次运行验证。
-* `editos-use`：用于启动服务和运行实际视频编辑工作流程。
-
-### Claude Code
-
-本仓库包含内置的 Claude Code Skills。
-如果您从**本仓库的根目录**启动 Claude Code，可以直接使用仓库中包含的项目级 Skills。Claude Code 可以帮助您安装和使用 EditOS。
-
-```bash
-/editos-install
-/editos-use
-```
-
-如果您想将这些技能安装到自己的全局 Claude Code 配置中，请运行：
-
-```bash
-mkdir -p ~/.claude/skills
-cp -R .claude/skills/editos-install ~/.claude/skills/
-cp -R .claude/skills/editos-use ~/.claude/skills/
-```
+---
 
 ## 📦 安装
 
-### 1. 克隆仓库
+### 快速开始
+
 ```bash
+# 克隆仓库
 git clone https://github.com/robloxsagax-web/EditOS.git
 cd EditOS
-```
 
-### 2. 创建虚拟环境
-
-```bash
-# 推荐 python>=3.11
+# 创建虚拟环境
 conda create -n editos python=3.11
 conda activate editos
-```
 
-### 3. 资源下载与安装
-
-```bash
+# 下载资源
 chmod +x download.sh
 ./download.sh
+
+# 安装依赖
 pip install -r requirements.txt
 ```
 
-## 🚀 快速开始
+### 配置
 
-注意：启动前，您需要在 `config.toml` 中配置 API-Key。详情请参阅文档 [API-Key 配置](docs/source/zh/api-key.md)。
+在 `config.toml` 中设置您的 API 密钥：
 
-### 启动 MCP 服务器
+```toml
+[llm]
+provider = "openrouter"  # openrouter, openai, deepseek, gemini, anthropic, groq, together, azure
+model = "openai/gpt-4o-mini-2024-07-18"
+base_url = "https://openrouter.ai/api/v1"
+api_key = "your-api-key"
 
-```bash
-PYTHONPATH=src python -m edit_os.mcp.server
+[vlm]
+provider = "openrouter"  # openrouter, gemini, qwen, glm, deepseek
+model = "google/gemini-2.0-flash"
+base_url = "https://openrouter.ai/api/v1"
+api_key = "your-api-key"
+
+[generate_voiceover]
+default_provider = "elevenlabs"  # elevenlabs, minimax, fish
+[generate_voiceover.providers.elevenlabs]
+api_key = "your-elevenlabs-key"
+
+[search_media]
+default_provider = "pexels"
+[search_media.providers.pexels]
+api_key = "your-pexels-key"
 ```
 
-### 启动对话界面
+---
 
-- **方法一：命令行界面**
+## 🚀 快速开始
 
-  ```bash
-  python cli.py
-  ```
+### 启动 Web 界面
 
-- **方法二：Web 界面**
+```bash
+uvicorn agent_fastapi:app --host 127.0.0.1 --port 8005
+```
 
-  ```bash
-  uvicorn agent_fastapi:app --host 127.0.0.1 --port 8005
-  ```
+然后在浏览器中打开 http://127.0.0.1:8005。
+
+### CLI 模式
+
+```bash
+python cli.py
+```
+
+---
+
+## 🐳 Docker 部署
+
+```bash
+# 拉取并运行
+docker run -v $(pwd)/config.toml:/app/config.toml \
+  -v $(pwd)/outputs:/app/outputs \
+  -p 7860:7860 \
+  editos/editos:v1.0.0
+```
+
+---
 
 ## 📁 项目结构
 
 ```
 EditOS/
-├── src/edit_os/               核心应用
-│   ├── mcp/                   Model Context Protocol
-│   ├── nodes/                 视频处理节点
-│   ├── skills/                Agent 技能库
-│   ├── storage/               Agent 记忆
-│   ├── utils/                 辅助工具
-│   ├── agent.py               构建 Agent
-│   └── config.py              配置管理
-├── docs/                      文档
-├── Dockerfile                 Docker 配置
-├── prompts/                   LLM 提示词模板
-├── resource/                  静态资源
-│   ├── bgms/                  背景音乐库
-│   ├── fonts/                 字体文件
-│   ├── script_templates/      视频脚本模板
-│   └── unicode_emojis.json   表情列表
-├── scripts/                   实用脚本
-├── web/                       Web 界面
-├── agent_fastapi.py           FastAPI 服务器
-├── cli.py                     命令行界面
-├── config.toml                主配置文件
-├── build_env.sh               环境构建脚本
-├── download.sh               资源下载器
-├── requirements.txt           运行时依赖
-└── run.sh                     启动脚本
+├── src/edit_os/           # 核心应用
+│   ├── mcp/              # Model Context Protocol 服务器
+│   ├── nodes/            # 视频处理节点
+│   │   └── core_nodes/   # 核心编辑节点
+│   ├── skills/           # Agent 技能
+│   ├── storage/          # Agent 记忆
+│   └── utils/            # 工具函数
+├── web/                  # Web 界面
+├── prompts/              # LLM 提示词
+├── resource/             # 字体、音乐、模板
+├── docs/                 # 文档
+└── scripts/              # 实用脚本
 ```
+
+---
+
+## 🤖 Claude Code 集成
+
+```bash
+# 从仓库根目录启动 Claude Code
+cd EditOS
+
+# 使用内置技能
+/editos-install    # 安装和配置
+/editos-use        # 启动和使用
+```
+
+---
 
 ## 📚 文档
 
-### 📖 教程索引
+- [API 密钥配置](docs/source/zh/api-key.md) - 所有提供商的设置
+- [使用指南](docs/source/zh/guide.md) - 教程和示例
+- [常见问题](docs/source/zh/faq.md) - 常见问题
 
-- [API-Key 配置](docs/source/zh/api-key.md) - 如何配置和管理 API 密钥
-- [使用教程](docs/source/zh/guide.md) - 常见用例和基本操作
-- [常见问题](docs/source/zh/faq.md) - 常见问题解答
-
-## TODO
-
-- [ ] 添加**配音类视频编辑**功能
-- [ ] 添加**声音克隆**支持
-- [ ] 添加更多**转场/滤镜/特效**效果功能
-- [ ] 添加**图像/视频生成和编辑**能力
-- [ ] **GPU 加速**渲染和高光选择
-
-## 致谢
-
-本项目基于以下优秀的开源项目构建：
-
-### 核心依赖
-- [MoviePy](https://github.com/Zulko/moviepy) - 视频编辑库
-- [FFmpeg](https://ffmpeg.org/) - 多媒体框架
-- [LangChain](https://www.langchain.com/) - 提供预构建 Agent 的框架
+---
 
 ## 📄 许可证
 
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件。
+MIT 许可证 - 参见 [LICENSE](LICENSE)
+
+---
+
+## 最新动态
+
+* **2026-08-05** v1.0.0 - 完整视频编辑流程初始发布
+* **2026-04-02** - AI 转场生成功能
+* **2026-03-22** - ASR 语音粗剪功能
+* **2026-03-12** - Claude Code 和 OpenClaw 集成

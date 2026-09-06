@@ -1,159 +1,248 @@
-# API Key Configuration Guide
+# API Key Configuration
 
-## 1. Large Language Model (LLM)
+EditOS supports multiple AI providers. Configure your preferred services in `config.toml`.
 
-### Using DeepSeek as an Example
+## Large Language Model (LLM)
 
-**Official Documentation**: https://api-docs.deepseek.com/zh-cn/
+Required for script generation and conversation. Supports any OpenAI-compatible API.
 
-Note: For users outside China, we recommend using large language models such as Gemini, Claude, or ChatGPT for the best experience.
+### OpenRouter (Recommended)
 
-### Configuration Steps
+Unified access to 100+ models including GPT-4o, Claude, Gemini, Llama, and more.
 
-1. **Apply for API Key**
-   - Visit platform: https://platform.deepseek.com/usage
-   - Log in and apply for API Key
-   - ⚠️ **Important**: Save the obtained API Key securely
-
-2. **Configuration Parameters**
-   - **Model Name**: `deepseek-chat`
-   - **Base URL**: `https://api.deepseek.com/v1`
-   - **API Key**: Fill in the Key obtained in the previous step
-
-3. **API Configuration**
-   - **Web Usage**:
-      - In the LLM model dropdown, select **Custom Model**, then fill in the model settings according to your configuration parameters.
-      - Or, open `config.toml`, locate `[llm]`, and configure `model`, `base_url`, and `api_key`. The model you entered will then appear in the dropdown on the Web page.
-   - **CLI**:
-      - If you prefer the CLI entry point, you need to open `config.toml`, locate `[llm]`, and configure `model`, `base_url`, and `api_key`.
-
-
-## 2. Multimodal Large Language Model (VLM)
-
-### 2.1 Using GLM-4.6V
-
-**API Key Management**: https://open.bigmodel.cn/usercenter/proj-mgmt/apikeys
-
-### Configuration Parameters
-
-- **Model Name**: `glm-4.6v`
-- **Base URL**: `https://open.bigmodel.cn/api/paas/v4/`
-
-### 2.2 Using Qwen3-VL
-
-**API Key Management**: Go to Alibaba Cloud Bailian Platform to apply for an API Key https://bailian.console.aliyun.com/cn-beijing/?apiKey=1&tab=globalset#/efm/api_key
-
-  - **Model Name**: `qwen3-vl-8b-instruct`
-  - **Base URL**: `https://dashscope.aliyuncs.com/compatible-mode/v1`
-
-  - Parameter Configuration: 
-    - **Web Usage**:
-      - In the VLM model dropdown, select **Custom Model**, then fill in the model settings according to your configuration parameters.
-      - Or, open `config.toml`, locate `[vlm]`, and configure `model`, `base_url`, and `api_key`. The model you entered will then appear in the dropdown on the Web page.
-    - **CLI**: 
-      - If you prefer the CLI entry point, you need to open `config.toml`, locate `[vlm]`, and configure `model`, `base_url`, and `api_key`.
-
-### 2.3 Using Qwen3-Omni
-
-Qwen3-Omni can also be applied for through the Alibaba Cloud Bailian Platform. The specific parameters are as follows, which can be used for automatic labeling music in omni_bgm_label.py
-- **Model Name**: `qwen3-omni-flash-2025-12-01`
-- **Base URL**: `https://dashscope.aliyuncs.com/compatible-mode/v1`
-
-For more details, please refer to the documentation: https://bailian.console.aliyun.com/cn-beijing/?tab=doc#/doc
-
-Model List: https://help.aliyun.com/zh/model-studio/models
-
-Billing Dashboard: https://billing-cost.console.aliyun.com/home
-
-## 3. Pexels Image and Video Download API Key Configuration
-
-1. Open the Pexels website, register an account, and apply for an API key at https://www.pexels.com/api/
-<div align="center">
-  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/resource/pexels_api.png" alt="Pexels API application" width="70%">
-  <p><em>Figure 1: Pexels API Application Page</em></p>
-</div>
-
-2. Web Usage: Locate the Pexels configuration, select "Use custom key", and enter your API key in the form.
-<div align="center">
-  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/resource/use_pexels_api_en.png" alt="Pexels API input" width="70%">
-  <p><em>Figure 2: Pexels API Usage</em></p>
-</div>
-
-3. Local Deployment: Fill in the API key in the `pexels_api_key` field in the `config.toml` file as the default configuration for the project.
-
-## 4. TTS (Text-to-Speech) Configuration
-
-
-
-### Option 1: MiniMax (Recommended)
-
-- **Service URL**: https://platform.minimaxi.com/docs/api-reference/speech-t2a-http
-- **API Key Base Url**: https://api.minimax.chat/v1/t2a_v2
-
-- **Configuration Steps**:
-   1. Create API Key
-   2. Visit: https://platform.minimax.io/user-center/basic-information/interface-key
-   3. Obtain and save API Key
-
-### Option 2: Bytedance (Recommended)
-1. Step 1: Enable Audio/Video Subtitle Generation Service
-   Use the legacy page to find the audio/video subtitle generation service:
-
-   - Visit: https://console.volcengine.com/speech/service/9?AppID=8782592131
-
-2. Step 2: Obtain Authentication Information
-   View the account basic information page:
-   
-   - Visit: https://console.volcengine.com/user/basics/
-
-<div align="center">
-  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/resource/use_bytedance_tts_zh.png" alt="Bytedance TTS API Configuration" width="70%">
-  <p><em>Figure 3: Bytedance TTS API Usage</em></p>
-</div>
-
-   You need to obtain the following information:
-   - **UID**: The ID from the main account information
-   - **APP ID**: The APP ID from the service interface authentication information
-   - **Access Token**: The Access Token from the service interface authentication information
-   
-   For local deployment, modify the config.toml file:
-
-```
-[generate_voiceover.providers.bytedance]
-uid = ""
-appid = ""
-access_token = ""
+```toml
+[llm]
+provider = "openrouter"
+model = "openai/gpt-4o-mini-2024-07-18"
+base_url = "https://openrouter.ai/api/v1"
+api_key = "sk-or-v1-xxxxx"
 ```
 
-For detailed documentation, please refer to: https://www.volcengine.com/docs/6561/80909
+**Get API Key:** https://openrouter.ai/keys
 
-### Option 3: 302.ai (Alternative solutions)
+### DeepSeek
 
-- **Service URL**: https://302.ai/product/detail/302ai-mmaudio-text-to-speech
-- **API Key Base url**：https://api.302.ai
+```toml
+[llm]
+provider = "openai"
+model = "deepseek-chat"
+base_url = "https://api.deepseek.com/v1"
+api_key = "sk-xxxxx"
+```
 
-## 5. AI Transition Configuration
+**Get API Key:** https://platform.deepseek.com/usage
 
-**Before you start**: AI transitions trigger additional model calls. Transitions are generated clip by clip between adjacent segments, so the more clips you have and the finer the shot splitting is, the higher the number of calls will usually be. As a result, resource usage is typically **significantly higher** than standard copywriting or voiceover workflows.
+### OpenAI
 
-**Output quality note**: The current transition description is generated from the first and last frames of adjacent clips by a vision model, while clip ordering is determined by the language model. Final results can therefore vary depending on frame content, prompts, model versions, and service-side behavior. Some randomness is expected, and output may not match expectations every time.
+```toml
+[llm]
+provider = "openai"
+model = "gpt-4o-mini"
+base_url = "https://api.openai.com/v1"
+api_key = "sk-xxxxx"
+```
 
-**Recommendation**: Start with a small test run, review the results, and then scale up if the quality and cost are acceptable. Please also check your **account balance** and **provider billing rules** in advance.
+**Get API Key:** https://platform.openai.com/api-keys
 
-### Option 1: MiniMax Hailuo
+### Gemini (Google AI)
 
-1. In most cases, the API key you already use for MiniMax LLM or TTS services can also be used for Hailuo video generation. If you already have one, you can reuse it directly. If not, create one from the MiniMax API platform by following the official [Quick Start](https://platform.minimax.io/docs/guides/quickstart).
+```toml
+[llm]
+provider = "openai"
+model = "gemini-2.0-flash"
+base_url = "https://generativelanguage.googleapis.com/v1beta"
+api_key = "AIzaSyxxxxx"
+```
 
-2. You can use `MiniMax-Hailuo-02`, or check the official [Video Generation documentation](https://platform.minimax.io/docs/api-reference/video-generation-intro) for newer supported model names.
+**Get API Key:** https://aistudio.google.com/app/apikey
 
-### Option 2: Alibaba Cloud Wan
+### Anthropic (Claude)
 
-1. In most cases, the API key you already use for Alibaba Cloud Model Studio LLM services can also be used for Wan video generation. If you already have one, you can reuse it directly. If not, follow the official guide to [get an API key](https://www.alibabacloud.com/help/en/model-studio/get-api-key).
+```toml
+[llm]
+provider = "anthropic"
+model = "claude-3-5-sonnet-20240620"
+base_url = "https://api.anthropic.com/v1"
+api_key = "sk-ant-xxxxx"
+```
 
-2. We recommend `wan2.2-kf2v-flash`, or you can check the official [first-and-last-frame image-to-video guide](https://www.alibabacloud.com/help/en/model-studio/image-to-video-first-and-last-frames-guide) for more supported model names and usage details.
+**Get API Key:** https://console.anthropic.com/settings/keys
 
-## Important Notes
+### Groq
 
-- All API Keys must be kept secure to avoid leakage
-- Ensure sufficient account balance before use
-- Regularly monitor API usage and costs
+```toml
+[llm]
+provider = "openai"
+model = "llama-3.1-70b-versatile"
+base_url = "https://api.groq.com/openai/v1"
+api_key = "gsk_xxxxx"
+```
+
+**Get API Key:** https://console.groq.com/keys
+
+### Together AI
+
+```toml
+[llm]
+provider = "openai"
+model = "meta-llama/Llama-3.1-405B-Instruct-Turbo"
+base_url = "https://api.together.xyz/v1"
+api_key = "togilypxxxxx"
+```
+
+**Get API Key:** https://api.together.xyz/settings/api-keys
+
+---
+
+## Vision Model (VLM)
+
+Required for image understanding and clip analysis. Supports multimodal models.
+
+### Gemini Vision (Recommended)
+
+```toml
+[vlm]
+provider = "openai"
+model = "gemini-2.0-flash"
+base_url = "https://generativelanguage.googleapis.com/v1beta"
+api_key = "AIzaSyxxxxx"
+```
+
+### OpenRouter Vision Models
+
+```toml
+[vlm]
+provider = "openrouter"
+model = "google/gemini-2.0-flash"
+base_url = "https://openrouter.ai/api/v1"
+api_key = "sk-or-v1-xxxxx"
+```
+
+### Qwen VL (Alibaba)
+
+```toml
+[vlm]
+provider = "openai"
+model = "qwen-vl-plus"
+base_url = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+api_key = "sk-xxxxx"
+```
+
+**Get API Key:** https://bailian.console.aliyun.com/
+
+### GLM-4V (Zhipu AI)
+
+```toml
+[vlm]
+provider = "openai"
+model = "glm-4v-plus"
+base_url = "https://open.bigmodel.cn/api/paas/v4"
+api_key = "xxxxx"
+```
+
+**Get API Key:** https://open.bigmodel.cn/usercenter/proj-mgmt/apikeys
+
+---
+
+## Text-to-Speech (TTS)
+
+Required for voiceover generation.
+
+### ElevenLabs (Recommended)
+
+```toml
+[generate_voiceover]
+default_provider = "elevenlabs"
+
+[generate_voiceover.providers.elevenlabs]
+api_key = "sk_xxxxx"
+voice_id = "EXAVITQu4vr4xnSDxMaL"  # Sarah (free tier)
+```
+
+**Get API Key:** https://elevenlabs.io/api
+**Free Voices:** https://elevenlabs.io/voice-library
+
+### MiniMax
+
+```toml
+[generate_voiceover]
+default_provider = "minimax"
+
+[generate_voiceover.providers.minimax]
+api_key = "xxxxx"
+group_id = "xxxxx"
+```
+
+**Get API Key:** https://platform.minimax.io/
+
+---
+
+## Stock Media Search
+
+Optional - enables searching for free stock photos and videos.
+
+### Pexels
+
+```toml
+[search_media]
+default_provider = "pexels"
+
+[search_media.providers.pexels]
+api_key = "xxxxx"
+```
+
+**Get API Key:** https://www.pexels.com/api/
+
+### Pixabay
+
+```toml
+[search_media]
+default_provider = "pixabay"
+
+[search_media.providers.pixabay]
+api_key = "xxxxx"
+```
+
+**Get API Key:** https://pixabay.com/api/
+
+---
+
+## Environment Variables (ModelScope)
+
+On ModelScope deployment, use environment variables:
+
+| Variable | Description |
+|----------|-------------|
+| `OPENSTORYLINE_LLM_API_KEY` | LLM API key |
+| `OPENSTORYLINE_VLM_API_KEY` | VLM API key |
+| `OPENSTORYLINE_PEXELS_API_KEY` | Pexels API key |
+| `OPENSTORYLINE_GENERATE_VOICEOVER__PROVIDERS__ELEVENLABS__API_KEY` | ElevenLabs key |
+
+---
+
+## Minimal Config Example
+
+```toml
+[llm]
+provider = "openrouter"
+model = "openai/gpt-4o-mini-2024-07-18"
+base_url = "https://openrouter.ai/api/v1"
+api_key = "sk-or-v1-your-key"
+
+[vlm]
+provider = "openrouter"
+model = "google/gemini-2.0-flash"
+base_url = "https://openrouter.ai/api/v1"
+api_key = "sk-or-v1-your-key"
+
+[generate_voiceover]
+default_provider = "elevenlabs"
+[generate_voiceover.providers.elevenlabs]
+api_key = "sk-your-key"
+voice_id = "EXAVITQu4vr4xnSDxMaL"
+
+[search_media]
+default_provider = "pexels"
+[search_media.providers.pexels]
+api_key = "your-pexels-key"
+```

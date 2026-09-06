@@ -7,38 +7,9 @@
   </picture>
 </h1>
 
----
-
-## 🎨 Logo & Dark Mode
-
-EditOS features a dual-theme logo system for optimal visibility:
-
-| Theme | Logo | Text Color |
-|-------|------|------------|
-| **Light Mode** | `brand_white.svg` | Dark text (#1F2937) |
-| **Dark Mode** | `brand_black.svg` | White text (#FFFFFF) |
-
-**The Problem:**
-- Original logos had inconsistent text colors that didn't adapt to background themes
-- Dark text became invisible on dark backgrounds
-- Poor vertical alignment with blank spaces
-
-**The Solution:**
-- Created separate light/dark variants
-- `brand_white.svg`: Dark text for light backgrounds
-- `brand_black.svg`: White text for dark backgrounds  
-- Consistent purple gradient icon with white play/edit symbol
-- Optimized drop shadows for each theme
-
-**Usage in your project:**
-```html
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="path/to/brand_black.svg">
-  <img src="path/to/brand_white.svg" alt="EditOS">
-</picture>
-```
-
----
+<p align="center">
+  AI-Powered Video Editing for YouTube Automation
+</p>
 
 <p align="center">
   <a href="./README_zh.md">🇨🇳 简体中文</a> |
@@ -58,13 +29,41 @@ EditOS features a dual-theme logo system for optimal visibility:
 
 ---
 
+## 💼 The Problem We're Solving
+
+### The Video Editing Bottleneck
+
+Creating YouTube content is **labor-intensive**. Content creators spend:
+- ⏰ **3-6 hours** editing each video
+- 😤 **Repetitive tasks**: cutting clips, adding transitions, syncing audio
+- 💸 **Expensive**: Hiring editors costs $500-2000/month per creator
+- 🚫 **Bottleneck**: Great ideas never get made because editing takes too long
+
+### For Hackathons & Builders
+
+You want to build the next viral video app, but:
+- Video editing APIs are complex and fragmented
+- FFmpeg commands are cryptic
+- Building automation takes weeks, not hours
+
+### Our Solution
+
+**EditOS** transforms complex video creation into natural, intuitive conversations. Just describe what you want in plain English, and AI handles the rest.
+
+| Before | After |
+|--------|-------|
+| 3-6 hours of manual editing | 5-10 minutes via chat |
+| Complex FFmpeg commands | Natural language prompts |
+| Expensive editors | Automated workflow |
+| One video at a time | Batch processing with Skills |
+
+---
+
 <p align="center">
   <video src="https://github.com/user-attachments/assets/9116767e-bcd9-417a-93d8-2db4d3d5df8e" width="80%" poster=""></video>
 </p>
 
 ---
-
-**EditOS** transforms complex video creation into natural, intuitive conversations. Powered by AI agents, it handles everything from script generation to final render—making professional video editing accessible to everyone.
 
 ## ✨ Key Features
 

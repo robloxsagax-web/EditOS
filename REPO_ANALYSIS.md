@@ -2,11 +2,39 @@
 
 ## 📋 Project Overview
 
-**Project:** EditOS - AI-powered conversational video editor
+**Project:** EditOS - AI-powered conversational video editor for YouTube automation
 **Repository:** https://github.com/robloxsagax-web/EditOS
 **ModelScope:** https://www.modelscope.cn/studios/Muhammad_Mujtaba/EditOS
 
 EditOS transforms complex video creation into natural, intuitive conversations using AI agents.
+
+---
+
+## 💼 Problem & Solution
+
+### The Problem
+
+Creating YouTube content is **labor-intensive**:
+- ⏰ **3-6 hours** of manual editing per video
+- 😤 **Repetitive tasks**: cutting clips, adding transitions, syncing audio
+- 💸 **Expensive**: Hiring editors costs $500-2000/month per creator
+- 🚫 **Bottleneck**: Great ideas never get made because editing takes too long
+
+For hackathons, building video automation is complex:
+- Video editing APIs are fragmented and complex
+- FFmpeg commands are cryptic
+- Building automation takes weeks, not hours
+
+### Our Solution
+
+**EditOS** - Turn video editing into a conversation. Just describe what you want in plain English.
+
+| Before | After |
+|--------|-------|
+| 3-6 hours manual editing | 5-10 minutes via chat |
+| Complex FFmpeg commands | Natural language prompts |
+| Expensive editors | Automated workflow |
+| One video at a time | Batch with Skills |
 
 ---
 
@@ -108,7 +136,7 @@ EditOS/
 ## 📝 Recent Changes
 
 ```
+4564d2a - fix: logo visibility for dark/light modes
+082cecb - feat: professional branding and comprehensive API docs
 edf03a2 - fix: make download.sh resilient to missing external resources
-aa84078 - merge modelscope master into GitHub main
-37b14ad - fix: use Sarah free API voice instead of Rachel
 ```

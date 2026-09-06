@@ -37,10 +37,6 @@
 
 ---
 
-> **🔭 This project was created With an AI agent (OpenHands) on behalf of robloxsagax-web.** Human-in-the-loop design — every artifact is previewable and controllable.
-
----
-
 ## 📋 Table of Contents
 
 1. [🚀 TL;DR — What is EditOS?](#tldr--what-is-editos)

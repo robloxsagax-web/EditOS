@@ -1,11 +1,44 @@
 # EditOS
 
-<p align="center">
+<h1 align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="web/static/brand_black.svg">
-    <img src="web/static/brand_white.svg" alt="EditOS" width="400">
+    <img src="web/static/brand_white.svg" alt="EditOS" height="50">
   </picture>
-</p>
+</h1>
+
+---
+
+## 🎨 Logo & Dark Mode
+
+EditOS features a dual-theme logo system for optimal visibility:
+
+| Theme | Logo | Text Color |
+|-------|------|------------|
+| **Light Mode** | `brand_white.svg` | Dark text (#1F2937) |
+| **Dark Mode** | `brand_black.svg` | White text (#FFFFFF) |
+
+**The Problem:**
+- Original logos had inconsistent text colors that didn't adapt to background themes
+- Dark text became invisible on dark backgrounds
+- Poor vertical alignment with blank spaces
+
+**The Solution:**
+- Created separate light/dark variants
+- `brand_white.svg`: Dark text for light backgrounds
+- `brand_black.svg`: White text for dark backgrounds  
+- Consistent purple gradient icon with white play/edit symbol
+- Optimized drop shadows for each theme
+
+**Usage in your project:**
+```html
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="path/to/brand_black.svg">
+  <img src="path/to/brand_white.svg" alt="EditOS">
+</picture>
+```
+
+---
 
 <p align="center">
   <a href="./README_zh.md">🇨🇳 简体中文</a> |

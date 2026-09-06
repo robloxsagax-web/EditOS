@@ -1,11 +1,44 @@
 # EditOS
 
-<p align="center">
+<h1 align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="web/static/brand_black.svg">
-    <img src="web/static/brand_white.svg" alt="EditOS" width="400">
+    <img src="web/static/brand_white.svg" alt="EditOS" height="50">
   </picture>
-</p>
+</h1>
+
+---
+
+## 🎨 Logo 与深色模式
+
+EditOS 采用双主题 Logo 系统，确保在任何背景下的最佳可见性：
+
+| 主题 | Logo | 文字颜色 |
+|-------|------|------------|
+| **浅色模式** | `brand_white.svg` | 深色文字 (#1F2937) |
+| **深色模式** | `brand_black.svg` | 白色文字 (#FFFFFF) |
+
+**问题所在：**
+- 原始 Logo 的文字颜色不能适应不同主题背景
+- 深色文字在深色背景上变得不可见
+- 垂直对齐不一致，存在空白区域
+
+**解决方案：**
+- 创建独立的浅色/深色变体
+- `brand_white.svg`：用于浅色背景的深色文字
+- `brand_black.svg`：用于深色背景的白色文字  
+- 统一的紫色渐变图标配白色播放/编辑符号
+- 针对每个主题优化了阴影效果
+
+**在项目中使用：**
+```html
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="path/to/brand_black.svg">
+  <img src="path/to/brand_white.svg" alt="EditOS">
+</picture>
+```
+
+---
 
 <p align="center">
   <a href="./README_zh.md">🇨🇳 简体中文</a> |

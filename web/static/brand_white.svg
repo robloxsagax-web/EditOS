@@ -6,7 +6,7 @@
       <stop offset="100%" style="stop-color:#8B5CF6"/>
     </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#6366F1" flood-opacity="0.4"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.15"/>
     </filter>
   </defs>
   <!-- Film/Edit Icon -->
@@ -15,7 +15,7 @@
   <polygon points="15,15 15,35 33,25" fill="white"/>
   <!-- Edit pencil -->
   <rect x="28" y="26" width="16" height="5" rx="2" fill="white" transform="rotate(-45 36 28.5)"/>
-  <!-- Text -->
-  <text x="52" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="white">Edit</text>
-  <text x="120" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="300" fill="#A78BFA">OS</text>
+  <!-- Text - DARK for light backgrounds -->
+  <text x="52" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1F2937">Edit</text>
+  <text x="120" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="600" fill="#6366F1">OS</text>
 </svg>

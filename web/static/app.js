@@ -299,7 +299,7 @@ function __osFormat(tpl, vars) {
 }
 
 function __t(key, vars) {
-  const lang = __osNormLang(window.OPENSTORYLINE_LANG || "zh");
+  const lang = __osNormLang(window.OPENSTORYLINE_LANG || "en");
   const table = __OS_I18N[lang] || __OS_I18N.zh;
   const raw = (table && table[key] != null) ? table[key] : (__OS_I18N.zh[key] ?? key);
   return __osFormat(raw, vars);
@@ -344,7 +344,7 @@ function __rerenderProviderFieldPlaceholders(root = document) {
 }
 
 function __osApplyHelpLinks(root = document) {
-  const lang = __osNormLang(window.OPENSTORYLINE_LANG || "zh");
+  const lang = __osNormLang(window.OPENSTORYLINE_LANG || "en");
   const nodes = (root || document).querySelectorAll(".sidebar-help[data-help-zh], .sidebar-help[data-help-en]");
 
   nodes.forEach((a) => {
@@ -356,7 +356,7 @@ function __osApplyHelpLinks(root = document) {
 }
 
 function __osApplyTooltipLinks(root = document) {
-  const lang = __osNormLang(window.OPENSTORYLINE_LANG || "zh");
+  const lang = __osNormLang(window.OPENSTORYLINE_LANG || "en");
 
   const nodes = (root || document).querySelectorAll(
     ".sidebar-help-tooltip-link[data-terms-zh], .sidebar-help-tooltip-link[data-terms-en], " +
@@ -437,7 +437,7 @@ function __osAppendToCurrentUrl(suffix) {
 }
 
 function __osApplyTopbarLinks(root = document) {
-  const lang = __osNormLang(window.OPENSTORYLINE_LANG || "zh");
+  const lang = __osNormLang(window.OPENSTORYLINE_LANG || "en");
   const nodes = (root || document).querySelectorAll(
     ".topbar-link[data-link-zh], .topbar-link[data-link-en], .topbar-link[data-link-suffix], .topbar-link[data-link-suffix-zh], .topbar-link[data-link-suffix-en]"
   );
@@ -1238,7 +1238,7 @@ class ChatUI {
       if (typeof hit === "string") return String(hit);
 
       if (hit && typeof hit === "object") {
-        const lang = __osNormLang(window.OPENSTORYLINE_LANG || "zh");
+        const lang = __osNormLang(window.OPENSTORYLINE_LANG || "en");
         const v = hit[lang] ?? hit.zh ?? hit.en;
         if (v != null) return String(v);
       }
@@ -2053,7 +2053,7 @@ class ChatUI {
       return;
     }
 
-    const lang = __osNormLang(window.OPENSTORYLINE_LANG || "zh");
+    const lang = __osNormLang(window.OPENSTORYLINE_LANG || "en");
 
     let key = "";
     try {
@@ -2480,7 +2480,7 @@ class App {
     this._switchLockTimer = 0;
 
     this.langToggle = $("#langToggle");
-    this.lang = __osNormLang(window.OPENSTORYLINE_LANG || "zh");
+    this.lang = __osNormLang(window.OPENSTORYLINE_LANG || "en");
 
     this._langWasStored = (__osLoadLang() != null);
 

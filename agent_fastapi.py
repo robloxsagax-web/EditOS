@@ -1269,7 +1269,7 @@ class ChatSession:
     def __init__(self, session_id: str, cfg: Settings):
         self.session_id = session_id
         self.cfg = cfg
-        self.lang = "zh"
+        self.lang = "en"
 
         default_llm = _peek_builtin_model_name("llm", self.cfg)
         default_vlm = _peek_builtin_model_name("vlm", self.cfg)
@@ -1710,7 +1710,7 @@ class ChatSession:
         sess = cls(session_id=session_id, cfg=cfg)
         sess.lang = str(data.get("lang") or "zh").strip().lower()
         if sess.lang not in ("zh", "en"):
-            sess.lang = "zh"
+            sess.lang = "en"
 
         sess.history = list(data.get("history") or [])
         sess.chat_model_key = str(data.get("chat_model_key") or sess.chat_model_key)

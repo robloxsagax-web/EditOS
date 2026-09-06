@@ -37,7 +37,7 @@
 
 ---
 
-> **🔭 This project was created by an AI agent (OpenHands) on behalf of robloxsagax-web.** Human-in-the-loop design — every artifact is previewable and controllable.
+> **🔭 This project was created With an AI agent (OpenHands) on behalf of robloxsagax-web.** Human-in-the-loop design — every artifact is previewable and controllable.
 
 ---
 

@@ -1,7 +1,7 @@
-# FireRed-OpenStoryline (Forked: Muhammad_Mujtaba/dood)
+# FireRed-EditOS (Forked: Muhammad_Mujtaba/dood)
 
 ## 📋 Project Overview
-**Original Repo:** https://github.com/FireRedTeam/FireRed-OpenStoryline
+**Original Repo:** https://github.com/EditOSTeam/FireRed-EditOS
 
 **Forked for:** Muhammad Mujtaba's ModelScope deployment
 **GitHub Mirror:** https://github.com/robloxsagax-web/Ai
@@ -29,7 +29,7 @@ A conversational AI video editor that turns complex video creation into natural 
 **Symptoms:** HTTP 400 Bad Request from OpenRouter API
 **Cause:** Unknown - possibly env var duplication or config merge issues
 
-**Solution:** Added auto-fix in `src/open_storyline/agent.py`:
+**Solution:** Added auto-fix in `src/edit_os/agent.py`:
 ```python
 if llm_model and len(llm_model) > 20:
     half = len(llm_model) // 2
@@ -48,7 +48,7 @@ if llm_model and len(llm_model) > 20:
 
 ### 4. Invalid ElevenLabs Voice ID
 **Problem:** Default voice_id was invalid
-**File:** `src/open_storyline/nodes/core_nodes/generate_voiceover.py`
+**File:** `src/edit_os/nodes/core_nodes/generate_voiceover.py`
 **Old:** `voice_id = "21m00Tcm4TlvRqSmPsE"` (invalid)
 **New:** `voice_id = "21m00Tcm4TlvDq8ikWAM"` (Rachel - valid)
 
@@ -78,9 +78,9 @@ if llm_model and len(llm_model) > 20:
 ### Source Code
 | File | Purpose |
 |------|---------|
-| `src/open_storyline/agent.py` | LLM/VLM initialization, duplicate fix |
-| `src/open_storyline/nodes/core_nodes/generate_voiceover.py` | Voice ID fix |
-| `src/open_storyline/config.py` | Settings model (validates config) |
+| `src/edit_os/agent.py` | LLM/VLM initialization, duplicate fix |
+| `src/edit_os/nodes/core_nodes/generate_voiceover.py` | Voice ID fix |
+| `src/edit_os/config.py` | Settings model (validates config) |
 
 ---
 

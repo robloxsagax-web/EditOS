@@ -30,8 +30,8 @@ max_retries = 2
 
 # ============= MCP Server =============
 [local_mcp_server]
-server_name = "storyline"
-server_cache_dir = ".storyline/.server_cache"
+server_name = "editos"
+server_cache_dir = ".editos/.server_cache"
 server_transport = "streamable-http"
 url_scheme = "http"
 connect_host = "127.0.0.1"
@@ -43,7 +43,7 @@ json_response = true
 stateless_http = false
 timeout = 600
 available_node_pkgs = [
-    "open_storyline.nodes.core_nodes"
+    "edit_os.nodes.core_nodes"
 ]
 available_nodes = [
     "LoadMediaNode", "SearchMediaNode", "SplitShotsNode", "LocalASRNode", "SpeechRoughCutNode", "GenerateAITransitionNode", 
@@ -54,7 +54,7 @@ available_nodes = [
 
 # =========== skills ==========
 [skills]
-skill_dir = "./.storyline/skills"
+skill_dir = "./.editos/skills"
 
 # =========== pexels ==========
 [search_media]
@@ -62,7 +62,7 @@ pexels_api_key = "test"
 
 # ============= Shot Segmentation =============
 [split_shots]
-transnet_weights = ".storyline/models/transnetv2-pytorch-weights.pth"
+transnet_weights = ".editos/models/transnetv2-pytorch-weights.pth"
 transnet_device = "cpu"
 
 # ============= Video Visual Understanding =============

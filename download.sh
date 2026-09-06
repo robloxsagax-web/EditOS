@@ -1,31 +1,31 @@
 #!/usr/bin/env bash
 # Create required directories
-mkdir -p .storyline resource
+mkdir -p .editos resource
 
-# 1. Download models.zip to .storyline/ and extract it (keep original directory name)
-wget "https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/openstoryline/models.zip" \
-  -O .storyline/models.zip
+# 1. Download models.zip to .editos/ and extract it (keep original directory name)
+wget "https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/models.zip" \
+  -O .editos/models.zip
 
-unzip -o .storyline/models.zip -d .storyline/models/
-
-# Remove the original archive
-rm .storyline/models.zip
-
-
-# 2. Download resource.zip to .storyline/ and extract it into ./resource
-wget "https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/openstoryline/resource.zip" \
-  -O .storyline/resource.zip
-
-unzip -o .storyline/resource.zip -d resource
+unzip -o .editos/models.zip -d .editos/models/
 
 # Remove the original archive
-rm .storyline/resource.zip
+rm .editos/models.zip
+
+
+# 2. Download resource.zip to .editos/ and extract it into ./resource
+wget "https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/resource.zip" \
+  -O .editos/resource.zip
+
+unzip -o .editos/resource.zip -d resource
+
+# Remove the original archive
+rm .editos/resource.zip
 
 # List of filenames
 files=("brand_black.png" "brand_white.png" "logo.png" "dice.png" "github.png" "node_map.png" "user_guide.png")
 
 # Base URL
-base_url="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/zailin/datasets/open_storyline"
+base_url="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/zailin/datasets/edit_os"
 
 # Download each file
 for f in "${files[@]}"; do

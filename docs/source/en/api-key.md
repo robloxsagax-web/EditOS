@@ -69,13 +69,13 @@ Billing Dashboard: https://billing-cost.console.aliyun.com/home
 
 1. Open the Pexels website, register an account, and apply for an API key at https://www.pexels.com/api/
 <div align="center">
-  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/openstoryline/docs/resource/pexels_api.png" alt="Pexels API application" width="70%">
+  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/resource/pexels_api.png" alt="Pexels API application" width="70%">
   <p><em>Figure 1: Pexels API Application Page</em></p>
 </div>
 
 2. Web Usage: Locate the Pexels configuration, select "Use custom key", and enter your API key in the form.
 <div align="center">
-  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/openstoryline/docs/resource/use_pexels_api_en.png" alt="Pexels API input" width="70%">
+  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/resource/use_pexels_api_en.png" alt="Pexels API input" width="70%">
   <p><em>Figure 2: Pexels API Usage</em></p>
 </div>
 
@@ -107,7 +107,7 @@ Billing Dashboard: https://billing-cost.console.aliyun.com/home
    - Visit: https://console.volcengine.com/user/basics/
 
 <div align="center">
-  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/openstoryline/docs/resource/use_bytedance_tts_zh.png" alt="Bytedance TTS API Configuration" width="70%">
+  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/resource/use_bytedance_tts_zh.png" alt="Bytedance TTS API Configuration" width="70%">
   <p><em>Figure 3: Bytedance TTS API Usage</em></p>
 </div>
 

@@ -69,13 +69,13 @@ Qwen3-Omni同样可以在阿里云百炼平台进行申请，具体参数如下�
 
 1. 打开Pexels网站，注册账号，申请API https://www.pexels.com/zh-cn/api/key/ 
 <div align="center">
-  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/openstoryline/docs/resource/pexels_api.png" alt="pexels下载图像和视频API申请" width="70%">
+  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/resource/pexels_api.png" alt="pexels下载图像和视频API申请" width="70%">
   <p><em>图1: Pexels API申请页面</em></p>
 </div>
 
 2. 网页使用：找到Pexels配置，选择使用自定义key，将API key填入表单中。
 <div align="center">
-  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/openstoryline/docs/resource/use_pexels_api_zh.png" alt="pexels API填写" width="70%">
+  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/resource/use_pexels_api_zh.png" alt="pexels API填写" width="70%">
   <p><em>图2: Pexels API 使用</em></p>
 </div>
 
@@ -103,7 +103,7 @@ Qwen3-Omni同样可以在阿里云百炼平台进行申请，具体参数如下�
    - 访问：https://console.volcengine.com/user/basics/
 
 <div align="center">
-  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/openstoryline/docs/resource/use_bytedance_tts_zh.png" alt="Bytedance TTS API填写" width="70%">
+  <img src="https://image-url-2-feature-1251524319.cos.ap-shanghai.myqcloud.com/editos/docs/resource/use_bytedance_tts_zh.png" alt="Bytedance TTS API填写" width="70%">
   <p><em>图3: Bytedance TTS API 使用</em></p>
 </div>
 

@@ -45,18 +45,18 @@ SRC_DIR = os.path.join(ROOT_DIR, "src")
 if SRC_DIR not in sys.path:
     sys.path.insert(0, SRC_DIR)
 
-from open_storyline.agent import build_agent, ClientContext
-from open_storyline.utils.prompts import get_prompt
-from open_storyline.utils.media_handler import scan_media_dir
-from open_storyline.utils.ai_transition_cancel import (
+from edit_os.agent import build_agent, ClientContext
+from edit_os.utils.prompts import get_prompt
+from edit_os.utils.media_handler import scan_media_dir
+from edit_os.utils.ai_transition_cancel import (
     clear_ai_transition_cancelled,
     set_ai_transition_cancelled,
 )
-from open_storyline.config import load_settings, default_config_path
-from open_storyline.config import Settings
-from open_storyline.storage.agent_memory import ArtifactStore
-from open_storyline.mcp.hooks.node_interceptors import ToolInterceptor
-from open_storyline.mcp.hooks.chat_middleware import set_mcp_log_sink, reset_mcp_log_sink
+from edit_os.config import load_settings, default_config_path
+from edit_os.config import Settings
+from edit_os.storage.agent_memory import ArtifactStore
+from edit_os.mcp.hooks.node_interceptors import ToolInterceptor
+from edit_os.mcp.hooks.chat_middleware import set_mcp_log_sink, reset_mcp_log_sink
 
 WEB_DIR = os.path.join(ROOT_DIR, "web")
 STATIC_DIR = os.path.join(WEB_DIR, "static")
@@ -64,7 +64,7 @@ INDEX_HTML = os.path.join(WEB_DIR, "index.html")
 NODE_MAP_HTML = os.path.join(WEB_DIR, "node_map/node_map.html")
 NODE_MAP_DIR = os.path.join(WEB_DIR, "node_map")
 
-SERVER_CACHE_DIR = os.path.join(ROOT_DIR, '.storyline' , ".server_cache")
+SERVER_CACHE_DIR = os.path.join(ROOT_DIR, '.editos' , ".server_cache")
 
 CHUNK_SIZE = 1024 * 1024  # 1MB
 
@@ -2284,7 +2284,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="OpenStoryline Web", version="1.0.0", lifespan=lifespan)
+app = FastAPI(title="EditOS Web", version="1.0.0", lifespan=lifespan)
 
 app.add_middleware(
     HttpRateLimitMiddleware,

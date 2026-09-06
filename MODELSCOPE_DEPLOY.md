@@ -1,6 +1,6 @@
 # ModelScope Deployment Guide
 
-This guide explains how to deploy OpenStoryline on ModelScope.
+This guide explains how to deploy EditOS on ModelScope.
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ OPENSTORYLINE_PEXELS_API_KEY=""
 
 ```bash
 # Build the image
-docker build -t openstoryline -f Dockerfile.modelscope .
+docker build -t editos -f Dockerfile.modelscope .
 
 # Run with environment variables
 docker run -p 7860:7860 \
@@ -44,7 +44,7 @@ docker run -p 7860:7860 \
   -e OPENSTORYLINE_VLM_API_KEY="your-key" \
   -e OPENSTORYLINE_VLM_MODEL="google/gemini-2.5-flash-image" \
   -e OPENSTORYLINE_VLM_BASE_URL="https://openrouter.ai/api/v1" \
-  openstoryline
+  editos
 ```
 
 ## ModelScope Deployment

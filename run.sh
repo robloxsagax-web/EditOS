@@ -39,7 +39,7 @@ fi
 
 HOST="${HOST:-0.0.0.0}"
 PORT="${PORT:-7860}"
-python -m open_storyline.mcp.server &
+python -m edit_os.mcp.server &
 MCP_PID=$!
 uvicorn agent_fastapi:app \
   --host "$HOST" \

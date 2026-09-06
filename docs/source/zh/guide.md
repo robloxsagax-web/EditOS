@@ -1,8 +1,8 @@
-# OpenStoryline 使用教程
+# EditOS 使用教程
 ---
 ## 0. 环境安装
 
-参见[README](https://github.com/FireRedTeam/FireRed-OpenStoryline/blob/main/README_zh.md)部分
+参见[README](https://github.com/EditOSTeam/FireRed-EditOS/blob/main/README_zh.md)部分
 
 ## 1. 基础使用教程
 
@@ -29,7 +29,7 @@
 
 ### 1.2. 编辑
 
-OpenStoryline 支持在任意阶段进行意图干预与局部重做：当某一步骤完成后，你可以直接用一句话提出修改要求，Agent会定位到需要重跑的步骤，而无需从流程起点重新开始。例如
+EditOS 支持在任意阶段进行意图干预与局部重做：当某一步骤完成后，你可以直接用一句话提出修改要求，Agent会定位到需要重跑的步骤，而无需从流程起点重新开始。例如
 - 帮我去掉那个拍摄天空的片段。
 - 换一个欢快一点的背景音乐。
 - 字幕换成更符合夕阳主题的颜色  
@@ -141,7 +141,7 @@ python -m scripts.llm_script_template_label
 
 仓库自带两款Skills，一个用于文风仿写，另一个用于保存剪辑流程。如果用户有更多自定义的skill可以按照以下方法添加：
 
-在`.storyline/skills`下创建一个新的文件夹，文件夹内新建`SKILL.md`文件；
+在`.editos/skills`下创建一个新的文件夹，文件夹内新建`SKILL.md`文件；
 SKILL内必须以：
 ```markdown
 ---

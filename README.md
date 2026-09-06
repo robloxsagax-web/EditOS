@@ -12,11 +12,6 @@
 </p>
 
 <p align="center">
-  <a href="./README_zh.md">🇨🇳 简体中文</a> |
-  <a href="./README.md">🌏 English</a>
-</p>
-
-<p align="center">
   <a href="https://www.modelscope.ai/studios/Muhammad_Mujtaba/EditOS/summary">
     <img src="https://img.shields.io/badge/🌐_ModelScope-Demo-4B6CFF?style=for-the-badge&logo=modelscope&logoColor=white" alt="ModelScope Demo"/>
   </a>

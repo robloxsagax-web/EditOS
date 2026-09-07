@@ -5,27 +5,17 @@
       <stop offset="50%" style="stop-color:#7C3AED"/>
       <stop offset="100%" style="stop-color:#8B5CF6"/>
     </linearGradient>
-    <filter id="glow">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#6366F1" flood-opacity="0.4"/>
-    </filter>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.2"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.15"/>
     </filter>
   </defs>
-  <!-- Icon Background with glow -->
+  <!-- Film/Edit Icon -->
   <rect x="4" y="5" width="40" height="40" rx="10" fill="url(#bgGrad)" filter="url(#shadow)"/>
-  <!-- Film strip frame -->
-  <rect x="10" y="11" width="28" height="28" rx="3" fill="white" opacity="0.95"/>
-  <!-- Film perforations -->
-  <rect x="12" y="9" width="4" height="4" rx="1" fill="white"/>
-  <rect x="12" y="37" width="4" height="4" rx="1" fill="white"/>
-  <rect x="32" y="9" width="4" height="4" rx="1" fill="white"/>
-  <rect x="32" y="37" width="4" height="4" rx="1" fill="white"/>
-  <!-- Play button -->
-  <polygon points="18,18 18,32 30,25" fill="#6366F1"/>
+  <!-- Play triangle -->
+  <polygon points="15,15 15,35 33,25" fill="white"/>
   <!-- Edit pencil -->
-  <rect x="24" y="23" width="14" height="4" rx="2" fill="#8B5CF6" transform="rotate(-45 31 25)"/>
+  <rect x="28" y="26" width="16" height="5" rx="2" fill="white" transform="rotate(-45 36 28.5)"/>
   <!-- Text - DARK for light backgrounds -->
-  <text x="52" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1F2937">Edit</text>
-  <text x="120" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="600" fill="#6366F1">OS</text>
+  <text x="52" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1F2937">Edit</text>
+  <text x="120" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="600" fill="#6366F1">OS</text>
 </svg>

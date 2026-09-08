@@ -54,12 +54,6 @@ You want to build the next viral video app, but:
 
 ---
 
-<p align="center">
-  <video src="https://github.com/user-attachments/assets/9116767e-bcd9-417a-93d8-2db4d3d5df8e" width="80%" poster=""></video>
-</p>
-
----
-
 ## ✨ Key Features
 
 | Feature | Description |
@@ -117,13 +111,11 @@ EditOS supports multiple AI providers for maximum flexibility:
 
 ## ✨ Demo
 
-| Zhongcao Style | Humorous Style | Product Picks | Artistic Style |
-|:--------------:|:--------------:|:-------------:|:--------------:|
-| <video src="https://github.com/user-attachments/assets/28043813-1fda-4077-80d4-c6f540d7c7cb" width="220" /> | <video src="https://github.com/user-attachments/assets/a1e33da2-a799-4398-a1bb-b25bb5143d7c" width="220" /> | <video src="https://github.com/user-attachments/assets/444fd0fb-8824-4c25-b449-9309b0fcfd85" width="220" /> | <video src="https://github.com/user-attachments/assets/2e69fa0d-b693-4d4f-b4d2-45146254f9e8" width="220" /> |
-
-| Unboxing | Talking Pet | Travel Vlog | Year-in-Review |
-|:--------:|:-----------:|:-----------:|:--------------:|
-| <video src="https://github.com/user-attachments/assets/ff1d669b-1d27-4cf8-b0be-1b141c717466" width="220" /> | <video src="https://github.com/user-attachments/assets/063608bb-7fbd-4841-a08f-032ae459499f" width="220" /> | <video src="https://github.com/user-attachments/assets/bc441dfa-e995-4575-8401-ecefa269e57b" width="220" /> | <video src="https://github.com/user-attachments/assets/533ef5c3-bb76-4416-bff7-825e88b00b7d" width="220" /> |
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/533ef5c3-bb76-4416-bff7-825e88b00b7d" width="220" controls></video>
+</p>
+</video>
+</p>
 
 ---
 
